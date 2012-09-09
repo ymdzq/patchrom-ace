@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:visible="true" android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_30" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_03" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_07" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_11" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_15" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_19" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_23" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_27" />
+    <item android:duration="80" android:drawable="@drawable/camera_spinner_30" />
+</animation-list>
