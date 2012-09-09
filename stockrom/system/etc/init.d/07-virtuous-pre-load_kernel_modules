@@ -1,0 +1,4 @@
+#!/system/bin/sh
+# Loading bcmdhd wlan driver
+
+/system/bin/insmod /system/lib/modules/bcmdhd.ko
