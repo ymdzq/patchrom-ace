@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@com.htc:dimen/darklist_info_xs" android:textColor="@com.htc:color/darklist_secondary" android:ellipsize="end" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />
