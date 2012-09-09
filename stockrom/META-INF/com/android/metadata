@@ -1,0 +1,3 @@
+post-build=htccn_chs/htc_vivo/vivo:4.0.4/IMM76D/390815.5:user/release-keys
+post-timestamp=1339602212
+pre-device=vivo
