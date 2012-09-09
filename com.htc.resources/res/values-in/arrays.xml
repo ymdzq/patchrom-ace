@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="htc_phoneTypes">
+        <item>Layar utama</item>
+        <item>Seluler</item>
+        <item>Kantor</item>
+        <item>Faks Kantor</item>
+        <item>Faks Rumah</item>
+        <item>Pager</item>
+        <item>Lainnya</item>
+        <item>Radio</item>
+        <item>Mobil</item>
+        <item>Perusahaan</item>
+        <item>Asisten</item>
+        <item>Ubahsuaian</item>
+    </string-array>
+    <string-array name="exchange_mailTypes">
+        <item>Email</item>
+        <item>Email 2</item>
+        <item>Email 3</item>
+    </string-array>
+    <string-array name="quick_text">
+        <item>Kamu sedang apa?</item>
+        <item>Hanya beri kabar aku baik-baik saja...</item>
+        <item>Di mana kamu?</item>
+        <item>Lihat ini!</item>
+        <item>Aku akan segera tiba.</item>
+        <item>Aku hampir terlambat.</item>
+        <item>Saya akan balik telepon kamu.</item>
+        <item>Mendesak! Balas segera...</item>
+        <item>Sampai jumpa lagi secepatnya.</item>
+    </string-array>
+    <string-array name="quick_predefine_text">
+        <item>Kamu sedang apa?</item>
+        <item>Hanya beri kabar aku baik-baik saja...</item>
+        <item>Di mana kamu?</item>
+        <item>Lihat ini!</item>
+        <item>Aku akan segera tiba.</item>
+        <item>Aku hampir terlambat.</item>
+        <item>Saya akan balik telepon kamu.</item>
+        <item>Mendesak! Balas segera...</item>
+        <item>Sampai jumpa lagi secepatnya.</item>
+    </string-array>
+    <string-array name="localized_opertator_name">
+        <item>45412,CMCC PEOPLES</item>
+        <item>46000,CMCC</item>
+        <item>46001,China Unicom</item>
+        <item>46002,CMCC</item>
+        <item>46003,China Telcom</item>
+        <item>46007,CMCC</item>
+        <item>46601,Far EasTone</item>
+        <item>46605,APBW</item>
+        <item>46606,TUNTEX</item>
+        <item>46668,ACeS</item>
+        <item>46688,KGT-Online</item>
+        <item>46689,VIBO</item>
+        <item>46692,Chunghwa</item>
+        <item>46693,MOBITAI</item>
+        <item>46697,TW Mobile</item>
+        <item>46699,TransAsia</item>
+    </string-array>
+    <array name="sort_list">
+        <item>@string/sortby_name_a_z</item>
+        <item>@string/sortby_name_z_a</item>
+        <item>@string/sortby_date_old_new</item>
+        <item>@string/sortby_date_new_old</item>
+    </array>
+    <string-array name="htc_weather_conditions">
+        <item>Panas Cerah</item>
+        <item>Sebagian Besar Panas Cerah</item>
+        <item>Sebagian Panas Cerah</item>
+        <item>Awan Tidak Merata</item>
+        <item>Sinar Matahari Berkabut</item>
+        <item>Sebagian Besar Berawan</item>
+        <item>Berawan</item>
+        <item>Suram</item>
+        <item>Kabut</item>
+        <item>Hujan rintik-rintik</item>
+        <item>Sebagian Besar Berawan dengan Hujan Rintik-rintik</item>
+        <item>Sebagian Panas Cerah dengan Hujan Rintik</item>
+        <item>Hujan badai</item>
+        <item>Sebagian Besar Berawan dengan Hujan Rintik-rintik dan Guntur</item>
+        <item>Sebagian Panas Cerah dengan Hujan Rintik dan Guntur</item>
+        <item>Hujan</item>
+        <item>Sedikit Salju</item>
+        <item>Sebagian Besar Berawan dengan Sedikit Salju</item>
+        <item>Sebagian Panas Cerah dengan Sedikit Salju</item>
+        <item>Salju</item>
+        <item>Sebagian Besar Berawan bercampur Salju</item>
+        <item>Es</item>
+        <item>Hujan es dan salju</item>
+        <item>Hujan Membeku</item>
+        <item>Hujan bercampur Salju</item>
+        <item>Panas</item>
+        <item>Dingin</item>
+        <item>Berangin</item>
+        <item>Cerah</item>
+        <item>Sebagian Besar Cerah</item>
+        <item>Berawan Sebagian</item>
+        <item>Awan Tidak Merata</item>
+        <item>Berkabut</item>
+        <item>Sebagian Besar Berawan</item>
+        <item>Sebagian Berawan dengan Hujan Rintik-rintik</item>
+        <item>Sebagian Besar Berawan dengan Hujan Rintik-rintik</item>
+        <item>Berawan Sebagian dengan Hujan Guntur</item>
+        <item>Sebagian Besar Berawan dengan Hujan Rintik-rintik dan Guntur</item>
+        <item>Sebagian Berawan dengan Sedikit Salju</item>
+        <item>Sebagian Besar Berawan dengan Sedikit Salju</item>
+        <item>Hujan badai bercampur es</item>
+        <item>Pasir</item>
+        <item>Debu</item>
+        <item>Tornado</item>
+    </string-array>
+    <string-array name="htc_weather_icons">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+    </string-array>
+</resources>
