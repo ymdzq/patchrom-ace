@@ -1,0 +1,5 @@
+stop adbd
+mount -o remount,rw / /
+chmod 06755 /sbin/adbd
+mount -o remount,ro / /
+start adbd
