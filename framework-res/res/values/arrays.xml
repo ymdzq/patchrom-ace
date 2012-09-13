@@ -537,12 +537,15 @@
         <item>clock</item>
     </string-array>
     <string-array name="networkAttributes">
-        <item>wifi,1,1,1</item>
-        <item>mobile,0,0,0</item>
-        <item>mobile_mms,2,0,2</item>
-        <item>mobile_supl,3,0,2</item>
-        <item>mobile_dun,4,0,4</item>
-        <item>mobile_hipri,5,0,3</item>
+        <item>wifi,1,1,1,-1,true</item>
+        <item>mobile,0,0,0,-1,true</item>
+        <item>mobile_mms,2,0,2,60000,true</item>
+        <item>mobile_supl,3,0,2,60000,true</item>
+        <item>mobile_hipri,5,0,3,60000,true</item>
+        <item>mobile_fota,10,0,2,60000,true</item>
+        <item>mobile_ims,11,0,2,60000,true</item>
+        <item>mobile_cbs,12,0,2,60000,true</item>
+        <item>wifi_p2p,13,1,0,-1,true</item>
     </string-array>
     <integer-array name="config_protectedNetworks">
         <item>10</item>
@@ -567,18 +570,17 @@
         <item>usb0</item>
     </string-array>
     <string-array name="config_tether_wifi_regexs">
-        <item>wl0.1</item>
+        <item>wlan0</item>
     </string-array>
     <array name="config_tether_wimax_regexs" />
     <array name="config_tether_bluetooth_regexs" />
     <array name="config_tether_dhcp_range" />
     <array name="config_mobile_hotspot_provision_app" />
     <integer-array name="config_tether_upstream_types">
-        <item>0</item>
         <item>1</item>
         <item>4</item>
-        <item>5</item>
     </integer-array>
+    <array name="config_cdma_dun_supported_types" />
     <array name="config_usbHostBlacklist" />
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
@@ -593,7 +595,7 @@
         <item>@integer/zzz_config_virtualKeyVibePattern_item4</item>
     </array>
     <integer-array name="config_keyboardTapVibePattern">
-        <item>30</item>
+        <item>40</item>
     </integer-array>
     <integer-array name="config_safeModeDisabledVibePattern">
         <item>0</item>
@@ -690,6 +692,7 @@
     <array name="config_twoDigitNumberPattern" />
     <array name="config_sms_enabled_single_shift_tables" />
     <array name="config_sms_enabled_locking_shift_tables" />
+    <array name="config_oemUsbModeOverride" />
     <array name="common_nicknames" />
     <string-array name="imAddressTypes">
         <item>Home</item>
@@ -777,7 +780,6 @@
         <item>tiap0</item>
         <item>wlan0</item>
         <item>wlan1</item>
-        <item>softap.0</item>
     </string-array>
     <string-array name="htc_config_tether_bluetooth_regexs">
         <item>tap_brcm_bt_pan</item>

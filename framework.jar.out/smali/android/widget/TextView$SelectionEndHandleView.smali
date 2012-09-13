@@ -26,23 +26,23 @@
     .parameter "drawableRtl"
 
     .prologue
-    .line 12350
+    .line 12326
     iput-object p1, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
-    .line 12351
+    .line 12327
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView$HandleView;-><init>(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 12353
+    .line 12329
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mPos:I
 
-    .line 12354
+    .line 12330
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mHotspotY:F
 
-    .line 12356
+    .line 12332
     return-void
 .end method
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 12373
+    .line 12349
     iget-object v0, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionEnd()I
@@ -68,7 +68,7 @@
     .parameter "isRtlRun"
 
     .prologue
-    .line 12360
+    .line 12336
     iget-object v0, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->useHtcTextSelection()Z
@@ -78,18 +78,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 12361
+    .line 12337
     iget v0, p0, Landroid/widget/TextView$HandleView;->mHotspotX:I
 
-    .line 12366
+    .line 12342
     :goto_0
     return v0
 
-    .line 12363
+    .line 12339
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 12364
+    .line 12340
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 12366
+    .line 12342
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -116,10 +116,10 @@
     .parameter "actionPopupWindow"
 
     .prologue
-    .line 12403
+    .line 12379
     iput-object p1, p0, Landroid/widget/TextView$HandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
-    .line 12404
+    .line 12380
     return-void
 .end method
 
@@ -129,10 +129,10 @@
     .parameter "y"
 
     .prologue
-    .line 12389
+    .line 12365
     const/4 v0, 0x0
 
-    .line 12390
+    .line 12366
     .local v0, offset:I
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
@@ -143,7 +143,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 12391
+    .line 12367
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
     iget-object v3, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
@@ -156,7 +156,7 @@
 
     move-result v0
 
-    .line 12396
+    .line 12372
     :goto_0
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
@@ -164,7 +164,7 @@
 
     move-result v1
 
-    .line 12397
+    .line 12373
     .local v1, selectionStart:I
     if-gt v0, v1, :cond_0
 
@@ -185,16 +185,16 @@
 
     move-result v0
 
-    .line 12399
+    .line 12375
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/TextView$SelectionEndHandleView;->positionAtCursorOffset(IZ)V
 
-    .line 12400
+    .line 12376
     return-void
 
-    .line 12393
+    .line 12369
     .end local v1           #selectionStart:I
     :cond_1
     iget-object v2, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
@@ -211,7 +211,7 @@
     .parameter "offset"
 
     .prologue
-    .line 12379
+    .line 12355
     :try_start_0
     iget-object v1, p0, Landroid/widget/TextView$SelectionEndHandleView;->this$0:Landroid/widget/TextView;
 
@@ -230,20 +230,20 @@
 
     invoke-static {v1, v2, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 12380
+    .line 12356
     invoke-virtual {p0}, Landroid/widget/TextView$SelectionEndHandleView;->updateDrawable()V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12384
+    .line 12360
     :goto_0
     return-void
 
-    .line 12381
+    .line 12357
     :catch_0
     move-exception v0
 
-    .line 12382
+    .line 12358
     .local v0, e:Ljava/lang/IndexOutOfBoundsException;
     const-string v1, "HtcTextSelection"
 

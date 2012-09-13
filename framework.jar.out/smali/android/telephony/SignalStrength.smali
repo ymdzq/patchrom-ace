@@ -2645,10 +2645,8 @@
 
     .local v2, level:I
     :goto_0
-
     return v2
 
-    .line 422
     .end local v2           #level:I
     :cond_0
     invoke-virtual {p0}, Landroid/telephony/SignalStrength;->getLteLevel()I

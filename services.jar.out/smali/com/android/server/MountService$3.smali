@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 973
+    .line 974
     iput-object p1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iput-object p2, p0, Lcom/android/server/MountService$3;->val$path:Ljava/lang/String;
@@ -43,7 +43,7 @@
     .locals 8
 
     .prologue
-    .line 978
+    .line 979
     :try_start_0
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
@@ -66,7 +66,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 980
+    .line 981
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v4, p0, Lcom/android/server/MountService$3;->val$path:Ljava/lang/String;
@@ -78,7 +78,7 @@
     #calls: Lcom/android/server/MountService;->doShareUnshareVolume(Ljava/lang/String;Ljava/lang/String;Z)V
     invoke-static {v3, v4, v5, v6}, Lcom/android/server/MountService;->access$200(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 986
+    .line 987
     :cond_0
     :goto_0
     invoke-static {}, Lcom/android/server/MountService;->access$1400()Z
@@ -87,27 +87,27 @@
 
     if-nez v3, :cond_1
 
-    .line 991
+    .line 992
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.settings.MEMORY_CARD_SETTINGS"
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 992
+    .line 993
     .local v1, in:Landroid/content/Intent;
     const/high16 v3, 0x1000
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 993
+    .line 994
     const-string v3, "SD_POLICY"
 
     const/4 v4, 0x0
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 994
+    .line 995
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mContext:Landroid/content/Context;
@@ -117,13 +117,13 @@
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 999
+    .line 1000
     .end local v1           #in:Landroid/content/Intent;
     :cond_1
     :goto_1
     return-void
 
-    .line 981
+    .line 982
     :cond_2
     iget-object v3, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
@@ -137,7 +137,7 @@
     .local v2, rc:I
     if-eqz v2, :cond_0
 
-    .line 982
+    .line 983
     const-string v3, "MountService"
 
     const-string v4, "Insertion mount failed (%d)"
@@ -164,12 +164,12 @@
 
     goto :goto_0
 
-    .line 996
+    .line 997
     .end local v2           #rc:I
     :catch_0
     move-exception v0
 
-    .line 997
+    .line 998
     .local v0, ex:Ljava/lang/Exception;
     const-string v3, "MountService"
 

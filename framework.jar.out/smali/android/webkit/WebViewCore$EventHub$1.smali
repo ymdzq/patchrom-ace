@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1139
+    .line 1153
     iput-object p1, p0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1156
+    .line 1170
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -60,7 +60,7 @@
 
     invoke-static {v2, v4, v6, v9, v10}, Landroid/webkit/WebViewCore;->enterMsgHandle(Landroid/webkit/WebViewCore;IID)V
 
-    .line 1159
+    .line 1173
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -87,12 +87,12 @@
 
     if-nez v2, :cond_1
 
-    .line 1821
+    .line 1835
     :cond_0
     :goto_0
     return-void
 
-    .line 1166
+    .line 1180
     :cond_1
     move-object/from16 v0, p0
 
@@ -131,7 +131,7 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 1176
+    .line 1190
     :cond_2
     move-object/from16 v0, p1
 
@@ -139,7 +139,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1803
+    .line 1817
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -183,7 +183,7 @@
 
     if-eqz v2, :cond_23
 
-    .line 1805
+    .line 1819
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -198,7 +198,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/HTCWebCore$EditEventHub;->handleMessage(Landroid/os/Message;)V
 
-    .line 1819
+    .line 1833
     :cond_3
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -209,13 +209,13 @@
 
     move-wide/from16 v25, v0
 
-    .line 1820
+    .line 1834
     .local v25, currTime:D
     invoke-static/range {v25 .. v26}, Landroid/webkit/WebViewCore;->leaveMsgHandle(D)V
 
     goto :goto_0
 
-    .line 1178
+    .line 1192
     .end local v25           #currTime:D
     :pswitch_1
     move-object/from16 v0, p0
@@ -229,7 +229,7 @@
 
     goto :goto_1
 
-    .line 1182
+    .line 1196
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -242,7 +242,7 @@
 
     goto :goto_1
 
-    .line 1188
+    .line 1202
     :pswitch_3
     move-object/from16 v0, p0
 
@@ -252,7 +252,7 @@
 
     monitor-enter v4
 
-    .line 1189
+    .line 1203
     :try_start_0
     move-object/from16 v0, p0
 
@@ -267,7 +267,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/BrowserFrame;->destroy()V
 
-    .line 1190
+    .line 1204
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -279,7 +279,7 @@
     #setter for: Landroid/webkit/WebViewCore;->mBrowserFrame:Landroid/webkit/BrowserFrame;
     invoke-static {v2, v6}, Landroid/webkit/WebViewCore;->access$1102(Landroid/webkit/WebViewCore;Landroid/webkit/BrowserFrame;)Landroid/webkit/BrowserFrame;
 
-    .line 1191
+    .line 1205
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -293,7 +293,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/WebSettings;->onDestroyed()V
 
-    .line 1192
+    .line 1206
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -305,7 +305,7 @@
     #setter for: Landroid/webkit/WebViewCore;->mNativeClass:I
     invoke-static {v2, v6}, Landroid/webkit/WebViewCore;->access$702(Landroid/webkit/WebViewCore;I)I
 
-    .line 1193
+    .line 1207
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -317,7 +317,7 @@
     #setter for: Landroid/webkit/WebViewCore;->mWebView:Landroid/webkit/WebView;
     invoke-static {v2, v6}, Landroid/webkit/WebViewCore;->access$602(Landroid/webkit/WebViewCore;Landroid/webkit/WebView;)Landroid/webkit/WebView;
 
-    .line 1194
+    .line 1208
     monitor-exit v4
 
     goto :goto_1
@@ -331,7 +331,7 @@
 
     throw v2
 
-    .line 1198
+    .line 1212
     :pswitch_4
     move-object/from16 v0, p0
 
@@ -344,7 +344,7 @@
 
     goto :goto_1
 
-    .line 1202
+    .line 1216
     :pswitch_5
     move-object/from16 v0, p0
 
@@ -359,14 +359,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 1203
+    .line 1217
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg2:I
 
     move/from16 v45, v0
 
-    .line 1204
+    .line 1218
     .local v45, nodePointer:I
     move-object/from16 v0, p0
 
@@ -385,7 +385,7 @@
 
     move-result-object v37
 
-    .line 1206
+    .line 1220
     .local v37, label:Ljava/lang/String;
     if-eqz v37, :cond_3
 
@@ -395,7 +395,7 @@
 
     if-lez v2, :cond_3
 
-    .line 1207
+    .line 1221
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -425,7 +425,7 @@
 
     goto/16 :goto_1
 
-    .line 1215
+    .line 1229
     .end local v37           #label:Ljava/lang/String;
     .end local v45           #nodePointer:I
     :pswitch_6
@@ -440,7 +440,7 @@
 
     goto/16 :goto_1
 
-    .line 1220
+    .line 1234
     :pswitch_7
     move-object/from16 v0, p1
 
@@ -448,10 +448,10 @@
 
     if-nez v2, :cond_4
 
-    .line 1221
+    .line 1235
     const/16 v56, 0x0
 
-    .line 1225
+    .line 1239
     .local v56, xPercent:F
     :goto_2
     move-object/from16 v0, p0
@@ -471,7 +471,7 @@
 
     goto/16 :goto_1
 
-    .line 1223
+    .line 1237
     .end local v56           #xPercent:F
     :cond_4
     move-object/from16 v0, p1
@@ -487,7 +487,7 @@
     .restart local v56       #xPercent:F
     goto :goto_2
 
-    .line 1229
+    .line 1243
     .end local v56           #xPercent:F
     :pswitch_8
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
@@ -496,7 +496,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/CookieManager;->waitForCookieOperationsToComplete()V
 
-    .line 1230
+    .line 1244
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -505,7 +505,7 @@
 
     check-cast v46, Landroid/webkit/WebViewCore$GetUrlData;
 
-    .line 1231
+    .line 1245
     .local v46, param:Landroid/webkit/WebViewCore$GetUrlData;
     move-object/from16 v0, p0
 
@@ -526,7 +526,7 @@
 
     goto/16 :goto_1
 
-    .line 1236
+    .line 1250
     .end local v46           #param:Landroid/webkit/WebViewCore$GetUrlData;
     :pswitch_9
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
@@ -535,7 +535,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/CookieManager;->waitForCookieOperationsToComplete()V
 
-    .line 1237
+    .line 1251
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -544,7 +544,7 @@
 
     check-cast v46, Landroid/webkit/WebViewCore$PostUrlData;
 
-    .line 1238
+    .line 1252
     .local v46, param:Landroid/webkit/WebViewCore$PostUrlData;
     move-object/from16 v0, p0
 
@@ -569,7 +569,7 @@
 
     goto/16 :goto_1
 
-    .line 1242
+    .line 1256
     .end local v46           #param:Landroid/webkit/WebViewCore$PostUrlData;
     :pswitch_a
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
@@ -578,7 +578,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/CookieManager;->waitForCookieOperationsToComplete()V
 
-    .line 1243
+    .line 1257
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -587,28 +587,28 @@
 
     check-cast v38, Landroid/webkit/WebViewCore$BaseUrlData;
 
-    .line 1244
+    .line 1258
     .local v38, loadParams:Landroid/webkit/WebViewCore$BaseUrlData;
     move-object/from16 v0, v38
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mBaseUrl:Ljava/lang/String;
 
-    .line 1245
+    .line 1259
     .local v3, baseUrl:Ljava/lang/String;
     if-eqz v3, :cond_5
 
-    .line 1246
+    .line 1260
     const/16 v2, 0x3a
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v34
 
-    .line 1247
+    .line 1261
     .local v34, i:I
     if-lez v34, :cond_5
 
-    .line 1255
+    .line 1269
     const/4 v2, 0x0
 
     move/from16 v0, v34
@@ -617,7 +617,7 @@
 
     move-result-object v52
 
-    .line 1256
+    .line 1270
     .local v52, scheme:Ljava/lang/String;
     const-string/jumbo v2, "http"
 
@@ -659,7 +659,7 @@
 
     if-nez v2, :cond_5
 
-    .line 1260
+    .line 1274
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -671,7 +671,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeRegisterURLSchemeAsLocal(Ljava/lang/String;)V
     invoke-static {v2, v0}, Landroid/webkit/WebViewCore;->access$1800(Landroid/webkit/WebViewCore;Ljava/lang/String;)V
 
-    .line 1264
+    .line 1278
     .end local v34           #i:I
     .end local v52           #scheme:Ljava/lang/String;
     :cond_5
@@ -704,7 +704,7 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/webkit/BrowserFrame;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1269
+    .line 1283
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -716,7 +716,7 @@
 
     goto/16 :goto_1
 
-    .line 1277
+    .line 1291
     .end local v3           #baseUrl:Ljava/lang/String;
     .end local v38           #loadParams:Landroid/webkit/WebViewCore$BaseUrlData;
     :pswitch_b
@@ -754,7 +754,7 @@
 
     if-nez v2, :cond_6
 
-    .line 1279
+    .line 1293
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -768,7 +768,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/BrowserFrame;->didFirstLayout()V
 
-    .line 1282
+    .line 1296
     :cond_6
     move-object/from16 v0, p0
 
@@ -780,7 +780,7 @@
 
     goto/16 :goto_1
 
-    .line 1286
+    .line 1300
     :pswitch_c
     move-object/from16 v0, p0
 
@@ -799,7 +799,7 @@
 
     goto/16 :goto_1
 
-    .line 1292
+    .line 1306
     :pswitch_d
     move-object/from16 v0, p0
 
@@ -841,7 +841,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 1293
+    .line 1307
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -856,7 +856,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/HTCWebCore$EditEventHub;->handleMessage(Landroid/os/Message;)V
 
-    .line 1296
+    .line 1310
     :cond_7
     move-object/from16 v0, p0
 
@@ -877,7 +877,7 @@
 
     goto/16 :goto_1
 
-    .line 1302
+    .line 1316
     :pswitch_e
     move-object/from16 v0, p0
 
@@ -919,7 +919,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 1303
+    .line 1317
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -934,7 +934,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/HTCWebCore$EditEventHub;->handleMessage(Landroid/os/Message;)V
 
-    .line 1306
+    .line 1320
     :cond_8
     move-object/from16 v0, p0
 
@@ -955,7 +955,7 @@
 
     goto/16 :goto_1
 
-    .line 1310
+    .line 1324
     :pswitch_f
     move-object/from16 v0, p0
 
@@ -978,7 +978,7 @@
 
     goto/16 :goto_1
 
-    .line 1314
+    .line 1328
     :pswitch_10
     move-object/from16 v0, p0
 
@@ -1001,7 +1001,7 @@
 
     goto/16 :goto_1
 
-    .line 1318
+    .line 1332
     :pswitch_11
     move-object/from16 v0, p0
 
@@ -1020,7 +1020,7 @@
 
     goto/16 :goto_1
 
-    .line 1324
+    .line 1338
     :pswitch_12
     move-object/from16 v0, p1
 
@@ -1030,7 +1030,7 @@
 
     check-cast v47, Landroid/graphics/Point;
 
-    .line 1325
+    .line 1339
     .local v47, pt:Landroid/graphics/Point;
     move-object/from16 v0, p0
 
@@ -1071,7 +1071,7 @@
 
     goto :goto_3
 
-    .line 1330
+    .line 1344
     .end local v47           #pt:Landroid/graphics/Point;
     :pswitch_13
     move-object/from16 v0, p1
@@ -1082,7 +1082,7 @@
 
     check-cast v48, Landroid/graphics/Rect;
 
-    .line 1331
+    .line 1345
     .local v48, r:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -1111,7 +1111,7 @@
 
     goto/16 :goto_1
 
-    .line 1338
+    .line 1352
     .end local v48           #r:Landroid/graphics/Rect;
     :pswitch_14
     move-object/from16 v0, p0
@@ -1156,7 +1156,7 @@
 
     if-nez v2, :cond_a
 
-    .line 1341
+    .line 1355
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1174,7 +1174,7 @@
 
     goto/16 :goto_1
 
-    .line 1343
+    .line 1357
     :cond_a
     move-object/from16 v0, p0
 
@@ -1195,7 +1195,7 @@
 
     goto/16 :goto_1
 
-    .line 1348
+    .line 1362
     :pswitch_15
     move-object/from16 v0, p0
 
@@ -1205,7 +1205,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/WebViewCore;->stopLoading()V
 
-    .line 1349
+    .line 1363
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1221,7 +1221,7 @@
 
     goto/16 :goto_1
 
-    .line 1353
+    .line 1367
     :pswitch_16
     move-object/from16 v0, p0
 
@@ -1243,7 +1243,7 @@
     #setter for: Landroid/webkit/WebViewCore$EventHub;->mSavedPriority:I
     invoke-static {v2, v4}, Landroid/webkit/WebViewCore$EventHub;->access$2602(Landroid/webkit/WebViewCore$EventHub;I)I
 
-    .line 1354
+    .line 1368
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1257,17 +1257,17 @@
 
     invoke-static {v2, v4}, Landroid/os/Process;->setThreadPriority(II)V
 
-    .line 1356
+    .line 1370
     invoke-static {}, Landroid/webkit/WebViewCore;->pauseTimers()V
 
-    .line 1357
+    .line 1371
     invoke-static {}, Landroid/webkit/JniUtil;->useChromiumHttpStack()Z
 
     move-result v2
 
     if-nez v2, :cond_b
 
-    .line 1358
+    .line 1372
     invoke-static {}, Landroid/webkit/WebViewWorker;->getHandler()Landroid/webkit/WebViewWorker;
 
     move-result-object v2
@@ -1278,7 +1278,7 @@
 
     goto/16 :goto_1
 
-    .line 1361
+    .line 1375
     :cond_b
     move-object/from16 v0, p0
 
@@ -1291,7 +1291,7 @@
 
     goto/16 :goto_1
 
-    .line 1366
+    .line 1380
     :pswitch_17
     move-object/from16 v0, p0
 
@@ -1313,17 +1313,17 @@
 
     invoke-static {v2, v4}, Landroid/os/Process;->setThreadPriority(II)V
 
-    .line 1367
+    .line 1381
     invoke-static {}, Landroid/webkit/WebViewCore;->resumeTimers()V
 
-    .line 1368
+    .line 1382
     invoke-static {}, Landroid/webkit/JniUtil;->useChromiumHttpStack()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 1369
+    .line 1383
     invoke-static {}, Landroid/webkit/WebViewWorker;->getHandler()Landroid/webkit/WebViewWorker;
 
     move-result-object v2
@@ -1334,7 +1334,7 @@
 
     goto/16 :goto_1
 
-    .line 1375
+    .line 1389
     :pswitch_18
     move-object/from16 v0, p0
 
@@ -1347,7 +1347,7 @@
 
     goto/16 :goto_1
 
-    .line 1379
+    .line 1393
     :pswitch_19
     move-object/from16 v0, p0
 
@@ -1360,7 +1360,7 @@
 
     goto/16 :goto_1
 
-    .line 1384
+    .line 1398
     :pswitch_1a
     move-object/from16 v0, p0
 
@@ -1373,7 +1373,7 @@
 
     goto/16 :goto_1
 
-    .line 1388
+    .line 1402
     :pswitch_1b
     move-object/from16 v0, p0
 
@@ -1386,7 +1386,7 @@
 
     goto/16 :goto_1
 
-    .line 1392
+    .line 1406
     :pswitch_1c
     move-object/from16 v0, p0
 
@@ -1399,7 +1399,7 @@
     #calls: Landroid/webkit/WebViewCore;->clearCache(Z)V
     invoke-static {v2, v4}, Landroid/webkit/WebViewCore;->access$3300(Landroid/webkit/WebViewCore;Z)V
 
-    .line 1393
+    .line 1407
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1411,13 +1411,13 @@
 
     goto/16 :goto_1
 
-    .line 1397
+    .line 1411
     :pswitch_1d
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v2, :cond_c
 
-    .line 1398
+    .line 1412
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v4, "No WebView has been created in this process!"
@@ -1426,7 +1426,7 @@
 
     throw v2
 
-    .line 1401
+    .line 1415
     :cond_c
     sget-object v4, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -1450,13 +1450,13 @@
 
     goto :goto_4
 
-    .line 1406
+    .line 1420
     :pswitch_1e
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v2, :cond_e
 
-    .line 1407
+    .line 1421
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v4, "No WebView has been created in this process!"
@@ -1465,7 +1465,7 @@
 
     throw v2
 
-    .line 1410
+    .line 1424
     :cond_e
     move-object/from16 v0, p1
 
@@ -1475,7 +1475,7 @@
 
     check-cast v39, Ljava/util/Map;
 
-    .line 1411
+    .line 1425
     .local v39, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v6, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -1503,7 +1503,7 @@
 
     goto/16 :goto_1
 
-    .line 1416
+    .line 1430
     .end local v39           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :pswitch_1f
     move-object/from16 v0, p0
@@ -1533,7 +1533,7 @@
 
     goto :goto_5
 
-    .line 1420
+    .line 1434
     :pswitch_20
     move-object/from16 v0, p0
 
@@ -1567,7 +1567,7 @@
 
     goto/16 :goto_1
 
-    .line 1425
+    .line 1439
     :pswitch_21
     move-object/from16 v0, p0
 
@@ -1582,18 +1582,18 @@
 
     if-eqz v2, :cond_3
 
-    .line 1426
+    .line 1440
     const/16 v43, 0x0
 
-    .line 1427
+    .line 1441
     .local v43, nPluginCount:I
     const/16 v18, 0x0
 
-    .line 1429
+    .line 1443
     .local v18, bContainVideoPlugin:Z
     const/16 v17, 0x0
 
-    .line 1430
+    .line 1444
     .local v17, bContainHeavyFlashContent:Z
     move-object/from16 v0, p1
 
@@ -1603,18 +1603,18 @@
 
     check-cast v55, Ljava/lang/String;
 
-    .line 1431
+    .line 1445
     .local v55, url:Ljava/lang/String;
     if-eqz v55, :cond_10
 
-    .line 1432
+    .line 1446
     sget-object v2, Landroid/webkit/WebViewCore;->WebSite_Heavy_Flash_Content:[Ljava/lang/String;
 
     array-length v0, v2
 
     move/from16 v44, v0
 
-    .line 1433
+    .line 1447
     .local v44, nlength:I
     const/16 v34, 0x0
 
@@ -1626,7 +1626,7 @@
 
     if-ge v0, v1, :cond_10
 
-    .line 1434
+    .line 1448
     invoke-virtual/range {v55 .. v55}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v2
@@ -1647,10 +1647,10 @@
 
     if-ne v2, v4, :cond_12
 
-    .line 1435
+    .line 1449
     const/16 v17, 0x1
 
-    .line 1441
+    .line 1455
     .end local v34           #i:I
     .end local v44           #nlength:I
     :cond_10
@@ -1672,7 +1672,7 @@
 
     if-le v0, v2, :cond_13
 
-    .line 1442
+    .line 1456
     :cond_11
     move-object/from16 v0, p0
 
@@ -1691,7 +1691,7 @@
 
     goto/16 :goto_1
 
-    .line 1433
+    .line 1447
     .restart local v34       #i:I
     .restart local v44       #nlength:I
     :cond_12
@@ -1699,7 +1699,7 @@
 
     goto :goto_6
 
-    .line 1444
+    .line 1458
     .end local v34           #i:I
     .end local v44           #nlength:I
     :cond_13
@@ -1718,7 +1718,7 @@
 
     goto/16 :goto_1
 
-    .line 1451
+    .line 1465
     .end local v17           #bContainHeavyFlashContent:Z
     .end local v18           #bContainVideoPlugin:Z
     .end local v43           #nPluginCount:I
@@ -1732,7 +1732,7 @@
 
     check-cast v50, Landroid/webkit/WebViewCore$ReplaceTextData;
 
-    .line 1452
+    .line 1466
     .local v50, rep:Landroid/webkit/WebViewCore$ReplaceTextData;
     move-object/from16 v0, p0
 
@@ -1769,7 +1769,7 @@
 
     goto/16 :goto_1
 
-    .line 1458
+    .line 1472
     .end local v50           #rep:Landroid/webkit/WebViewCore$ReplaceTextData;
     :pswitch_23
     move-object/from16 v0, p1
@@ -1780,7 +1780,7 @@
 
     check-cast v36, Landroid/webkit/WebViewCore$JSKeyData;
 
-    .line 1459
+    .line 1473
     .local v36, jsData:Landroid/webkit/WebViewCore$JSKeyData;
     move-object/from16 v0, v36
 
@@ -1788,25 +1788,25 @@
 
     move-object/from16 v31, v0
 
-    .line 1460
+    .line 1474
     .local v31, evt:Landroid/view/KeyEvent;
     invoke-virtual/range {v31 .. v31}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v7
 
-    .line 1461
+    .line 1475
     .local v7, keyCode:I
     invoke-virtual/range {v31 .. v31}, Landroid/view/KeyEvent;->getUnicodeChar()I
 
     move-result v8
 
-    .line 1462
+    .line 1476
     .local v8, keyValue:I
     move-object/from16 v0, p1
 
     iget v5, v0, Landroid/os/Message;->arg1:I
 
-    .line 1463
+    .line 1477
     .local v5, generation:I
     move-object/from16 v0, p0
 
@@ -1839,7 +1839,7 @@
 
     goto/16 :goto_1
 
-    .line 1474
+    .line 1488
     .end local v5           #generation:I
     .end local v7           #keyCode:I
     .end local v8           #keyValue:I
@@ -1854,7 +1854,7 @@
 
     check-cast v20, Landroid/webkit/WebViewCore$CursorData;
 
-    .line 1475
+    .line 1489
     .local v20, cDat:Landroid/webkit/WebViewCore$CursorData;
     move-object/from16 v0, p0
 
@@ -1871,7 +1871,7 @@
 
     goto/16 :goto_1
 
-    .line 1480
+    .line 1494
     .end local v20           #cDat:Landroid/webkit/WebViewCore$CursorData;
     :pswitch_25
     invoke-static {}, Landroid/webkit/JniUtil;->useChromiumHttpStack()Z
@@ -1880,14 +1880,14 @@
 
     if-eqz v2, :cond_14
 
-    .line 1483
+    .line 1497
     invoke-static {}, Landroid/webkit/SslCertLookupTable;->getInstance()Landroid/webkit/SslCertLookupTable;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/webkit/SslCertLookupTable;->clear()V
 
-    .line 1484
+    .line 1498
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1899,7 +1899,7 @@
 
     goto/16 :goto_1
 
-    .line 1486
+    .line 1500
     :cond_14
     move-object/from16 v0, p0
 
@@ -1920,7 +1920,7 @@
 
     goto/16 :goto_1
 
-    .line 1491
+    .line 1505
     :pswitch_26
     move-object/from16 v0, p1
 
@@ -1930,7 +1930,7 @@
 
     check-cast v54, Landroid/webkit/WebViewCore$TouchUpData;
 
-    .line 1492
+    .line 1506
     .local v54, touchUpData:Landroid/webkit/WebViewCore$TouchUpData;
     move-object/from16 v0, v54
 
@@ -1938,7 +1938,7 @@
 
     if-eqz v2, :cond_15
 
-    .line 1493
+    .line 1507
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -1956,7 +1956,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeScrollLayer(ILandroid/graphics/Rect;)V
     invoke-static {v2, v4, v6}, Landroid/webkit/WebViewCore;->access$4000(Landroid/webkit/WebViewCore;ILandroid/graphics/Rect;)V
 
-    .line 1496
+    .line 1510
     :cond_15
     move-object/from16 v0, p0
 
@@ -1989,7 +1989,7 @@
 
     goto/16 :goto_1
 
-    .line 1502
+    .line 1516
     .end local v54           #touchUpData:Landroid/webkit/WebViewCore$TouchUpData;
     :pswitch_27
     move-object/from16 v0, p1
@@ -2000,7 +2000,7 @@
 
     check-cast v53, Landroid/webkit/WebViewCore$TouchEventData;
 
-    .line 1503
+    .line 1517
     .local v53, ted:Landroid/webkit/WebViewCore$TouchEventData;
     move-object/from16 v0, v53
 
@@ -2008,15 +2008,15 @@
 
     array-length v14, v2
 
-    .line 1504
+    .line 1518
     .local v14, count:I
     new-array v12, v14, [I
 
-    .line 1505
+    .line 1519
     .local v12, xArray:[I
     new-array v13, v14, [I
 
-    .line 1506
+    .line 1520
     .local v13, yArray:[I
     const/16 v19, 0x0
 
@@ -2026,7 +2026,7 @@
 
     if-ge v0, v14, :cond_16
 
-    .line 1507
+    .line 1521
     move-object/from16 v0, v53
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -2037,7 +2037,7 @@
 
     aput v2, v12, v19
 
-    .line 1508
+    .line 1522
     move-object/from16 v0, v53
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -2048,12 +2048,12 @@
 
     aput v2, v13, v19
 
-    .line 1506
+    .line 1520
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_7
 
-    .line 1510
+    .line 1524
     :cond_16
     move-object/from16 v0, v53
 
@@ -2061,7 +2061,7 @@
 
     if-eqz v2, :cond_17
 
-    .line 1511
+    .line 1525
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2079,7 +2079,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeScrollLayer(ILandroid/graphics/Rect;)V
     invoke-static {v2, v4, v6}, Landroid/webkit/WebViewCore;->access$4000(Landroid/webkit/WebViewCore;ILandroid/graphics/Rect;)V
 
-    .line 1514
+    .line 1528
     :cond_17
     move-object/from16 v0, p0
 
@@ -2114,7 +2114,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeResult:Z
 
-    .line 1516
+    .line 1530
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2158,7 +2158,7 @@
 
     goto :goto_8
 
-    .line 1526
+    .line 1540
     .end local v12           #xArray:[I
     .end local v13           #yArray:[I
     .end local v14           #count:I
@@ -2192,7 +2192,7 @@
 
     goto :goto_9
 
-    .line 1530
+    .line 1544
     :pswitch_29
     move-object/from16 v0, p1
 
@@ -2202,7 +2202,7 @@
 
     check-cast v36, Landroid/webkit/WebViewCore$JSInterfaceData;
 
-    .line 1531
+    .line 1545
     .local v36, jsData:Landroid/webkit/WebViewCore$JSInterfaceData;
     move-object/from16 v0, p0
 
@@ -2227,7 +2227,7 @@
 
     goto/16 :goto_1
 
-    .line 1536
+    .line 1550
     .end local v36           #jsData:Landroid/webkit/WebViewCore$JSInterfaceData;
     :pswitch_2a
     move-object/from16 v0, p1
@@ -2238,7 +2238,7 @@
 
     check-cast v36, Landroid/webkit/WebViewCore$JSInterfaceData;
 
-    .line 1537
+    .line 1551
     .restart local v36       #jsData:Landroid/webkit/WebViewCore$JSInterfaceData;
     move-object/from16 v0, p0
 
@@ -2259,7 +2259,7 @@
 
     goto/16 :goto_1
 
-    .line 1542
+    .line 1556
     .end local v36           #jsData:Landroid/webkit/WebViewCore$JSInterfaceData;
     :pswitch_2b
     move-object/from16 v0, p0
@@ -2283,7 +2283,7 @@
 
     goto/16 :goto_1
 
-    .line 1547
+    .line 1561
     :pswitch_2c
     move-object/from16 v0, p0
 
@@ -2306,7 +2306,7 @@
 
     goto/16 :goto_1
 
-    .line 1551
+    .line 1565
     :pswitch_2d
     move-object/from16 v0, p1
 
@@ -2316,7 +2316,7 @@
 
     check-cast v32, Landroid/webkit/WebViewCore$CursorData;
 
-    .line 1552
+    .line 1566
     .local v32, focusData:Landroid/webkit/WebViewCore$CursorData;
     move-object/from16 v0, p0
 
@@ -2337,7 +2337,7 @@
 
     goto/16 :goto_1
 
-    .line 1556
+    .line 1570
     .end local v32           #focusData:Landroid/webkit/WebViewCore$CursorData;
     :pswitch_2e
     move-object/from16 v0, p1
@@ -2348,7 +2348,7 @@
 
     check-cast v27, Landroid/webkit/WebViewCore$CursorData;
 
-    .line 1557
+    .line 1571
     .local v27, cursorData:Landroid/webkit/WebViewCore$CursorData;
     move-object/from16 v0, p0
 
@@ -2373,7 +2373,7 @@
 
     goto/16 :goto_1
 
-    .line 1562
+    .line 1576
     .end local v27           #cursorData:Landroid/webkit/WebViewCore$CursorData;
     :pswitch_2f
     move-object/from16 v0, p1
@@ -2384,7 +2384,7 @@
 
     check-cast v21, Landroid/webkit/WebViewCore$CursorData;
 
-    .line 1563
+    .line 1577
     .local v21, cData:Landroid/webkit/WebViewCore$CursorData;
     move-object/from16 v0, p0
 
@@ -2411,7 +2411,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeMoveMouseIfLatest(IIII)V
     invoke-static {v2, v4, v6, v9, v10}, Landroid/webkit/WebViewCore;->access$4600(Landroid/webkit/WebViewCore;IIII)V
 
-    .line 1566
+    .line 1580
     move-object/from16 v0, p1
 
     iget v2, v0, Landroid/os/Message;->arg1:I
@@ -2420,7 +2420,7 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 1567
+    .line 1581
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2432,7 +2432,7 @@
 
     goto/16 :goto_1
 
-    .line 1572
+    .line 1586
     .end local v21           #cData:Landroid/webkit/WebViewCore$CursorData;
     :pswitch_30
     move-object/from16 v0, p1
@@ -2443,7 +2443,7 @@
 
     check-cast v33, Landroid/os/Message;
 
-    .line 1573
+    .line 1587
     .local v33, hrefMsg:Landroid/os/Message;
     invoke-virtual/range {v33 .. v33}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -2472,7 +2472,7 @@
 
     invoke-virtual {v2, v4, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1575
+    .line 1589
     invoke-virtual/range {v33 .. v33}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -2500,7 +2500,7 @@
 
     invoke-virtual {v2, v4, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1577
+    .line 1591
     invoke-virtual/range {v33 .. v33}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
@@ -2528,12 +2528,12 @@
 
     invoke-virtual {v2, v4, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1579
+    .line 1593
     invoke-virtual/range {v33 .. v33}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_1
 
-    .line 1584
+    .line 1598
     .end local v33           #hrefMsg:Landroid/os/Message;
     :pswitch_31
     move-object/from16 v0, p0
@@ -2545,7 +2545,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeUpdateFrameCache()V
     invoke-static {v2}, Landroid/webkit/WebViewCore;->access$5100(Landroid/webkit/WebViewCore;)V
 
-    .line 1586
+    .line 1600
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2559,7 +2559,7 @@
 
     if-eqz v2, :cond_1a
 
-    .line 1587
+    .line 1601
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2573,7 +2573,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->postInvalidate()V
 
-    .line 1590
+    .line 1604
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -2595,7 +2595,7 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1594
+    .line 1608
     :cond_1a
     move-object/from16 v0, p0
 
@@ -2608,7 +2608,7 @@
 
     goto/16 :goto_1
 
-    .line 1598
+    .line 1612
     :pswitch_32
     move-object/from16 v0, p1
 
@@ -2618,7 +2618,7 @@
 
     check-cast v35, Landroid/os/Message;
 
-    .line 1599
+    .line 1613
     .local v35, imageResult:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -2644,18 +2644,18 @@
 
     iput v2, v0, Landroid/os/Message;->arg1:I
 
-    .line 1601
+    .line 1615
     invoke-virtual/range {v35 .. v35}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_1
 
-    .line 1599
+    .line 1613
     :cond_1b
     const/4 v2, 0x0
 
     goto :goto_a
 
-    .line 1605
+    .line 1619
     .end local v35           #imageResult:Landroid/os/Message;
     :pswitch_33
     move-object/from16 v0, p1
@@ -2666,7 +2666,7 @@
 
     check-cast v30, Landroid/webkit/WebViewCore$TextSelectionData;
 
-    .line 1607
+    .line 1621
     .local v30, deleteSelectionData:Landroid/webkit/WebViewCore$TextSelectionData;
     move-object/from16 v0, p0
 
@@ -2691,7 +2691,7 @@
 
     goto/16 :goto_1
 
-    .line 1612
+    .line 1626
     .end local v30           #deleteSelectionData:Landroid/webkit/WebViewCore$TextSelectionData;
     :pswitch_34
     move-object/from16 v0, p0
@@ -2713,7 +2713,7 @@
 
     goto/16 :goto_1
 
-    .line 1616
+    .line 1630
     :pswitch_35
     move-object/from16 v0, p0
 
@@ -2734,7 +2734,7 @@
 
     move-result-object v41
 
-    .line 1618
+    .line 1632
     .local v41, modifiedSelectionString:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2761,7 +2761,7 @@
 
     goto/16 :goto_1
 
-    .line 1623
+    .line 1637
     .end local v41           #modifiedSelectionString:Ljava/lang/String;
     :pswitch_36
     move-object/from16 v0, p1
@@ -2772,7 +2772,7 @@
 
     check-cast v22, Landroid/util/SparseBooleanArray;
 
-    .line 1625
+    .line 1639
     .local v22, choices:Landroid/util/SparseBooleanArray;
     move-object/from16 v0, p1
 
@@ -2780,7 +2780,7 @@
 
     move/from16 v24, v0
 
-    .line 1626
+    .line 1640
     .local v24, choicesSize:I
     move/from16 v0, v24
 
@@ -2788,7 +2788,7 @@
 
     move-object/from16 v23, v0
 
-    .line 1627
+    .line 1641
     .local v23, choicesArray:[Z
     const/16 v19, 0x0
 
@@ -2800,7 +2800,7 @@
 
     if-ge v0, v1, :cond_1c
 
-    .line 1628
+    .line 1642
     move-object/from16 v0, v22
 
     move/from16 v1, v19
@@ -2811,12 +2811,12 @@
 
     aput-boolean v2, v23, v19
 
-    .line 1627
+    .line 1641
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_b
 
-    .line 1630
+    .line 1644
     :cond_1c
     move-object/from16 v0, p0
 
@@ -2833,7 +2833,7 @@
 
     goto/16 :goto_1
 
-    .line 1635
+    .line 1649
     .end local v19           #c:I
     .end local v22           #choices:Landroid/util/SparseBooleanArray;
     .end local v23           #choicesArray:[Z
@@ -2854,7 +2854,7 @@
 
     goto/16 :goto_1
 
-    .line 1639
+    .line 1653
     :pswitch_38
     move-object/from16 v0, p0
 
@@ -2871,7 +2871,7 @@
 
     goto/16 :goto_1
 
-    .line 1643
+    .line 1657
     :pswitch_39
     move-object/from16 v0, p0
 
@@ -2900,7 +2900,7 @@
 
     goto :goto_c
 
-    .line 1647
+    .line 1661
     :pswitch_3a
     move-object/from16 v0, p0
 
@@ -2929,7 +2929,7 @@
 
     goto :goto_d
 
-    .line 1651
+    .line 1665
     :pswitch_3b
     move-object/from16 v0, p0
 
@@ -2942,7 +2942,7 @@
 
     goto/16 :goto_1
 
-    .line 1655
+    .line 1669
     :pswitch_3c
     move-object/from16 v0, p0
 
@@ -2955,7 +2955,7 @@
 
     goto/16 :goto_1
 
-    .line 1659
+    .line 1673
     :pswitch_3d
     move-object/from16 v0, p0
 
@@ -2974,7 +2974,7 @@
 
     goto/16 :goto_1
 
-    .line 1663
+    .line 1677
     :pswitch_3e
     move-object/from16 v0, p0
 
@@ -2987,7 +2987,7 @@
 
     goto/16 :goto_1
 
-    .line 1667
+    .line 1681
     :pswitch_3f
     move-object/from16 v0, p1
 
@@ -2997,7 +2997,7 @@
 
     check-cast v51, Landroid/webkit/WebView$SaveWebArchiveMessage;
 
-    .line 1669
+    .line 1683
     .local v51, saveMessage:Landroid/webkit/WebView$SaveWebArchiveMessage;
     move-object/from16 v0, p0
 
@@ -3022,7 +3022,7 @@
 
     iput-object v2, v0, Landroid/webkit/WebView$SaveWebArchiveMessage;->mResultFile:Ljava/lang/String;
 
-    .line 1671
+    .line 1685
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3048,7 +3048,7 @@
 
     goto/16 :goto_1
 
-    .line 1676
+    .line 1690
     .end local v51           #saveMessage:Landroid/webkit/WebView$SaveWebArchiveMessage;
     :pswitch_40
     move-object/from16 v0, p1
@@ -3059,7 +3059,7 @@
 
     check-cast v29, Landroid/webkit/WebViewCore$GeolocationPermissionsData;
 
-    .line 1678
+    .line 1692
     .local v29, data:Landroid/webkit/WebViewCore$GeolocationPermissionsData;
     move-object/from16 v0, p0
 
@@ -3084,7 +3084,7 @@
 
     goto/16 :goto_1
 
-    .line 1683
+    .line 1697
     .end local v29           #data:Landroid/webkit/WebViewCore$GeolocationPermissionsData;
     :pswitch_41
     move-object/from16 v0, p0
@@ -3100,7 +3100,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeSplitContent(I)V
     invoke-static {v2, v4}, Landroid/webkit/WebViewCore;->access$6600(Landroid/webkit/WebViewCore;I)V
 
-    .line 1684
+    .line 1698
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3124,7 +3124,7 @@
 
     invoke-virtual {v2, v4, v6, v9}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
-    .line 1686
+    .line 1700
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3138,7 +3138,7 @@
 
     goto/16 :goto_1
 
-    .line 1693
+    .line 1707
     :pswitch_42
     move-object/from16 v0, p0
 
@@ -3151,7 +3151,7 @@
 
     goto/16 :goto_1
 
-    .line 1697
+    .line 1711
     :pswitch_43
     move-object/from16 v0, p1
 
@@ -3163,7 +3163,7 @@
 
     goto/16 :goto_1
 
-    .line 1701
+    .line 1715
     :pswitch_44
     move-object/from16 v0, p0
 
@@ -3184,7 +3184,7 @@
 
     goto/16 :goto_1
 
-    .line 1705
+    .line 1719
     :pswitch_45
     move-object/from16 v0, p1
 
@@ -3194,7 +3194,7 @@
 
     check-cast v42, Landroid/webkit/WebViewCore$MotionUpData;
 
-    .line 1706
+    .line 1720
     .local v42, motionUpData:Landroid/webkit/WebViewCore$MotionUpData;
     move-object/from16 v0, p0
 
@@ -3221,7 +3221,7 @@
 
     if-nez v2, :cond_1f
 
-    .line 1709
+    .line 1723
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3231,7 +3231,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeUpdateFrameCache()V
     invoke-static {v2}, Landroid/webkit/WebViewCore;->access$5100(Landroid/webkit/WebViewCore;)V
 
-    .line 1711
+    .line 1725
     :cond_1f
     move-object/from16 v0, p0
 
@@ -3260,7 +3260,7 @@
 
     move-result-object v40
 
-    .line 1714
+    .line 1728
     .local v40, message:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -3281,7 +3281,7 @@
 
     goto/16 :goto_1
 
-    .line 1720
+    .line 1734
     .end local v40           #message:Landroid/os/Message;
     .end local v42           #motionUpData:Landroid/webkit/WebViewCore$MotionUpData;
     :pswitch_46
@@ -3300,7 +3300,7 @@
 
     goto/16 :goto_1
 
-    .line 1724
+    .line 1738
     :pswitch_47
     move-object/from16 v0, p0
 
@@ -3313,7 +3313,7 @@
 
     goto/16 :goto_1
 
-    .line 1728
+    .line 1742
     :pswitch_48
     move-object/from16 v0, p0
 
@@ -3337,13 +3337,13 @@
 
     goto/16 :goto_1
 
-    .line 1732
+    .line 1746
     :pswitch_49
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v2, :cond_20
 
-    .line 1733
+    .line 1747
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v4, "No WebView has been created in this process!"
@@ -3352,7 +3352,7 @@
 
     throw v2
 
-    .line 1736
+    .line 1750
     :cond_20
     sget-object v4, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -3366,7 +3366,7 @@
 
     goto/16 :goto_1
 
-    .line 1741
+    .line 1755
     :pswitch_4a
     move-object/from16 v0, p1
 
@@ -3376,7 +3376,7 @@
 
     check-cast v28, Landroid/webkit/WebViewCore$TouchHighlightData;
 
-    .line 1742
+    .line 1756
     .local v28, d:Landroid/webkit/WebViewCore$TouchHighlightData;
     move-object/from16 v0, v28
 
@@ -3384,7 +3384,7 @@
 
     if-eqz v2, :cond_21
 
-    .line 1743
+    .line 1757
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3402,7 +3402,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeScrollLayer(ILandroid/graphics/Rect;)V
     invoke-static {v2, v4, v6}, Landroid/webkit/WebViewCore;->access$4000(Landroid/webkit/WebViewCore;ILandroid/graphics/Rect;)V
 
-    .line 1746
+    .line 1760
     :cond_21
     move-object/from16 v0, p0
 
@@ -3427,7 +3427,7 @@
 
     move-result-object v49
 
-    .line 1748
+    .line 1762
     .local v49, rects:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/graphics/Rect;>;"
     move-object/from16 v0, p0
 
@@ -3454,7 +3454,7 @@
 
     goto/16 :goto_1
 
-    .line 1754
+    .line 1768
     .end local v28           #d:Landroid/webkit/WebViewCore$TouchHighlightData;
     .end local v49           #rects:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/graphics/Rect;>;"
     :pswitch_4b
@@ -3469,7 +3469,7 @@
 
     goto/16 :goto_1
 
-    .line 1758
+    .line 1772
     :pswitch_4c
     move-object/from16 v0, p0
 
@@ -3484,7 +3484,7 @@
     #calls: Landroid/webkit/WebViewCore;->nativeAutoFillForm(I)V
     invoke-static {v2, v4}, Landroid/webkit/WebViewCore;->access$7600(Landroid/webkit/WebViewCore;I)V
 
-    .line 1759
+    .line 1773
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3510,7 +3510,7 @@
 
     goto/16 :goto_1
 
-    .line 1764
+    .line 1778
     :pswitch_4d
     move-object/from16 v0, p1
 
@@ -3520,7 +3520,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 1768
+    .line 1782
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3542,7 +3542,7 @@
 
     goto/16 :goto_1
 
-    .line 1774
+    .line 1788
     :pswitch_4e
     move-object/from16 v0, p0
 
@@ -3555,7 +3555,7 @@
 
     goto/16 :goto_1
 
-    .line 1779
+    .line 1793
     :pswitch_4f
     move-object/from16 v0, p0
 
@@ -3567,7 +3567,7 @@
 
     goto/16 :goto_1
 
-    .line 1784
+    .line 1798
     :pswitch_50
     move-object/from16 v0, p0
 
@@ -3580,7 +3580,7 @@
 
     goto/16 :goto_1
 
-    .line 1788
+    .line 1802
     :pswitch_51
     move-object/from16 v0, p0
 
@@ -3593,7 +3593,7 @@
 
     goto/16 :goto_1
 
-    .line 1792
+    .line 1806
     :pswitch_52
     move-object/from16 v0, p0
 
@@ -3610,7 +3610,7 @@
 
     goto/16 :goto_1
 
-    .line 1796
+    .line 1810
     :pswitch_53
     move-object/from16 v0, p0
 
@@ -3639,7 +3639,7 @@
 
     goto :goto_e
 
-    .line 1806
+    .line 1820
     :cond_23
     move-object/from16 v0, p0
 
@@ -3696,7 +3696,7 @@
 
     if-eqz v2, :cond_24
 
-    .line 1808
+    .line 1822
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$EventHub$1;->this$1:Landroid/webkit/WebViewCore$EventHub;
@@ -3716,7 +3716,7 @@
 
     goto/16 :goto_1
 
-    .line 1811
+    .line 1825
     :cond_24
     const-string v2, "LOGTAG"
 
@@ -3746,7 +3746,7 @@
 
     goto/16 :goto_1
 
-    .line 1176
+    .line 1190
     :pswitch_data_0
     .packed-switch 0x60
         :pswitch_4

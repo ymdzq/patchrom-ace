@@ -15,10 +15,18 @@
         <set name="plenty">
           <item name="value1">15000</item>
           <item name="value2">30000</item>
-          <item name="value3">60000</item>
-          <item name="value4">120000</item>
-          <item name="value5">600000</item>
-          <item name="value6">-1</item>
+          <item name="value3">45000</item>
+          <item name="value4">60000</item>
+          <item name="value5">120000</item>
+          <item name="value6">600000</item>
+          <item name="value7">-1</item>
+        </set>
+      </function>
+    </module>
+    <module name="defaultTime1224">
+      <function>
+        <set name="single">
+          <item name="default">24</item>
         </set>
       </function>
     </module>
@@ -84,20 +92,21 @@
   <ShutdownConfiguration>
     <ShutdownAnimation image_png="/system/customize/resource/downanimation.zip" image="" fps="15" />
   </ShutdownConfiguration>
+  <category name="SettingsProvider">
+    <module name="res">
+      <function name="values">
+        <set name="single">
+          <item name="def_install_non_market_apps">1</item>
+          <item name="def_2g_on">2</item>
+        </set>
+      </function>
+    </module>
+  </category>
   <category name="Settings">
     <module name="properties">
       <function>
         <set name="single">
           <item name="market_name">HTC Desire HD A9191</item>
-        </set>
-      </function>
-    </module>
-  </category>
-  <category name="SettingsProvider">
-    <module name="res">
-      <function name="values">
-        <set name="single">
-          <item name="def_2g_on">3</item>
         </set>
       </function>
     </module>

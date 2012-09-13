@@ -634,7 +634,7 @@
     .locals 3
 
     .prologue
-    .line 3171
+    .line 3177
     :try_start_0
     const-string v1, "service.policy.camera"
 
@@ -644,15 +644,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3175
+    .line 3181
     :goto_0
     return-void
 
-    .line 3172
+    .line 3178
     :catch_0
     move-exception v0
 
-    .line 3173
+    .line 3179
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v1, "DevicePolicyManagerService"
 
@@ -3077,7 +3077,7 @@
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 3164
+    .line 3170
     :goto_0
     return-void
 
@@ -3170,93 +3170,7 @@
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 3152
-    const-string v4, "  mActivePasswordQuality=0x"
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    .line 3153
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordQuality:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 3154
-    const-string v4, "  mActivePasswordLength="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordLength:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3155
-    const-string v4, "  mActivePasswordUpperCase="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordUpperCase:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3156
-    const-string v4, "  mActivePasswordLowerCase="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordLowerCase:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3157
-    const-string v4, "  mActivePasswordLetters="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordLetters:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3158
-    const-string v4, "  mActivePasswordNumeric="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordNumeric:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3159
-    const-string v4, "  mActivePasswordSymbols="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordSymbols:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3160
-    const-string v4, "  mActivePasswordNonLetter="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mActivePasswordNonLetter:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3161
-    const-string v4, "  mFailedPasswordAttempts="
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v4, p0, Lcom/android/server/DevicePolicyManagerService;->mFailedPasswordAttempts:I
-
-    invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
-
-    .line 3162
+    .line 3168
     const-string v4, "  mPasswordOwner="
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -3265,10 +3179,10 @@
 
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 3163
+    .line 3169
     monitor-exit p0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .end local v0           #N:I
     .end local v2           #i:I

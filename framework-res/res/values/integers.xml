@@ -14,7 +14,7 @@
     <integer name="config_lidOpenRotation">90</integer>
     <integer name="config_deskDockRotation">-1</integer>
     <integer name="config_carDockRotation">-1</integer>
-    <integer name="config_deskDockKeepsScreenOn">0</integer>
+    <integer name="config_deskDockKeepsScreenOn">1</integer>
     <integer name="config_carDockKeepsScreenOn">1</integer>
     <integer name="config_lidKeyboardAccessibility">1</integer>
     <integer name="config_lidNavigationAccessibility">0</integer>
@@ -23,7 +23,7 @@
     <integer name="config_lowBatteryWarningLevel">15</integer>
     <integer name="config_lowBatteryCloseWarningLevel">20</integer>
     <integer name="config_defaultNotificationLedOn">500</integer>
-    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <integer name="config_defaultNotificationLedOff">2000</integer>
     <integer name="config_notificationsBatteryLowARGB">-65536</integer>
     <integer name="config_notificationsBatteryMediumARGB">-256</integer>
     <integer name="config_notificationsBatteryFullARGB">-16711936</integer>

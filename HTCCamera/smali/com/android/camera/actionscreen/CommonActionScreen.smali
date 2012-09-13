@@ -871,9 +871,11 @@
 
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 478
     .local v2, intent:Landroid/content/Intent;
     const/4 v0, 0x1
 
+    .line 482
     .local v0, canPlay:Z
     :try_start_0
     const-string v3, "com.htc.video"
@@ -904,12 +906,14 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 483
     const-string v3, "landscape"
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 484
     invoke-virtual {p0}, Lcom/android/camera/actionscreen/CommonActionScreen;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v3

@@ -1395,7 +1395,7 @@
     .line 202
     if-eqz p1, :cond_0
 
-    const v0, 0x1070020
+    const v0, 0x1070021
 
     .line 204
     .local v0, vibrateResId:I

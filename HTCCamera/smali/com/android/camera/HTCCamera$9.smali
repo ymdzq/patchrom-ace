@@ -187,12 +187,14 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3315
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.album.action.VIEW_PHOTO_FROM_CAMERA"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 3316
     .restart local v1       #intent:Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/camera/HTCCamera$9;->this$0:Lcom/android/camera/HTCCamera;
 

@@ -275,7 +275,7 @@
 
     .line 1428
     .local v7, r:Landroid/content/res/Resources;
-    const v12, 0x107002d
+    const v12, 0x107002e
 
     invoke-virtual {v7, v12}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -284,7 +284,7 @@
     sput-object v12, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
     .line 1429
-    const v12, 0x107002e
+    const v12, 0x107002f
 
     invoke-virtual {v7, v12}, Landroid/content/res/Resources;->getIntArray(I)[I
 

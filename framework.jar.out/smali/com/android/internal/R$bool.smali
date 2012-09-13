@@ -21,13 +21,13 @@
 
 .field public static final action_bar_expanded_action_views_exclusive:I = 0x1110004
 
-.field public static final config_actionMenuItemAllCaps:I = 0x1110030
+.field public static final config_actionMenuItemAllCaps:I = 0x111002f
 
-.field public static final config_allowActionMenuItemTextWithIcon:I = 0x1110031
+.field public static final config_allowActionMenuItemTextWithIcon:I = 0x1110030
 
 .field public static final config_allowAllRotations:I = 0x1110013
 
-.field public static final config_alwaysUseCdmaRssi:I = 0x111002d
+.field public static final config_alwaysUseCdmaRssi:I = 0x111002c
 
 .field public static final config_animateScreenLights:I = 0x1110012
 
@@ -55,7 +55,7 @@
 
 .field public static final config_disableMenuKeyInLockScreen:I = 0x111001a
 
-.field public static final config_duplicate_port_omadm_wappush:I = 0x111002e
+.field public static final config_duplicate_port_omadm_wappush:I = 0x111002d
 
 .field public static final config_enableLockBeforeUnlockScreen:I = 0x111001b
 
@@ -67,9 +67,9 @@
 
 .field public static final config_intrusiveNotificationLed:I = 0x1110019
 
-.field public static final config_mms_content_disposition_support:I = 0x111002c
+.field public static final config_mms_content_disposition_support:I = 0x111002b
 
-.field public static final config_rebootAfterFinishingNetworkLock:I = 0x1110033
+.field public static final config_rebootAfterFinishingNetworkLock:I = 0x1110032
 
 .field public static final config_reverseDefaultRotation:I = 0x1110014
 
@@ -79,19 +79,19 @@
 
 .field public static final config_showMenuShortcutsWhenKeyboardPresent:I = 0x1110028
 
-.field public static final config_showNavigationBar:I = 0x111002f
+.field public static final config_showNavigationBar:I = 0x111002e
 
 .field public static final config_sip_wifi_only:I = 0x1110025
 
 .field public static final config_sms_capable:I = 0x1110024
 
-.field public static final config_sms_utf8_support:I = 0x111002b
+.field public static final config_sms_utf8_support:I = 0x111002a
 
 .field public static final config_swipeDisambiguation:I = 0x111001f
 
-.field public static final config_telephony_use_own_number_for_voicemail:I = 0x111002a
+.field public static final config_telephony_use_own_number_for_voicemail:I = 0x1110029
 
-.field public static final config_trust_zone_supported:I = 0x1110034
+.field public static final config_trust_zone_supported:I = 0x1110033
 
 .field public static final config_ui_enableFadingMarquee:I = 0x1110009
 
@@ -107,15 +107,13 @@
 
 .field public static final config_wifi_p2p_support:I = 0x111000c
 
-.field public static final config_wimaxEnabled:I = 0x1110032
+.field public static final config_wimaxEnabled:I = 0x1110031
 
-.field public static final lockscreen_isPortrait:I = 0x1110035
+.field public static final lockscreen_isPortrait:I = 0x1110034
 
 .field public static final preferences_prefer_dual_pane:I = 0x1110002
 
 .field public static final show_ongoing_ime_switcher:I = 0x1110003
-
-.field public static final skip_radio_power_off_on_sim_refresh_reset:I = 0x1110029
 
 .field public static final skip_restoring_network_selection:I = 0x1110027
 
@@ -129,7 +127,7 @@
     .locals 0
 
     .prologue
-    .line 12924
+    .line 12920
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

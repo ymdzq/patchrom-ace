@@ -9342,7 +9342,7 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 90012
+    .line 4708
     :cond_a
     iget-object v0, v6, Lcom/android/server/pm/BasePermission;->packageSetting:Lcom/android/server/pm/PackageSettingBase;
 
@@ -9350,26 +9350,22 @@
 
     move-object/from16 v0, v17
 
-    .line 4709
     iget-object v0, v0, Lcom/android/server/pm/PackageSettingBase;->signatures:Lcom/android/server/pm/PackageSignatures;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    .line 4710
     iget-object v0, v0, Lcom/android/server/pm/PackageSignatures;->mSignatures:[Landroid/content/pm/Signature;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, p1
 
-    .line 4711
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
     move-object/from16 v18, v0
 
-    .line 4712
     invoke-static/range {v17 .. v18}, Lcom/android/server/pm/PackageManagerService;->compareSignatures([Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)I
 
     move-result v17
@@ -9378,26 +9374,22 @@
 
     move-object/from16 v0, p0
 
-    .line 90001
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mPlatformPackage:Landroid/content/pm/PackageParser$Package;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    .line 90002
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, p1
 
-    .line 90003
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->mSignatures:[Landroid/content/pm/Signature;
 
     move-object/from16 v18, v0
 
-    .line 90004
     invoke-static/range {v17 .. v18}, Lcom/android/server/pm/PackageManagerService;->compareSignatures([Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)I
 
     move-result v17
@@ -9511,7 +9503,7 @@
 
     goto/16 :goto_3
 
-    .line 4739
+    .line 4708
     .end local v4           #allowed:Z
     :cond_d
     const/4 v4, 0x0
@@ -19472,7 +19464,6 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 4079
     const-string v12, "Skipping provider name "
 
     invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -19485,7 +19476,6 @@
 
     move-result-object v3
 
-    .line 4080
     const-string v12, " (in package "
 
     invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -19502,7 +19492,6 @@
 
     move-result-object v3
 
-    .line 4081
     const-string v12, "): name already used by "
 
     invoke-virtual {v3, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -30872,32 +30861,26 @@
 
     if-nez v10, :cond_6
 
-    .line 2940
     invoke-virtual {v5, v1}, Landroid/content/pm/ParceledListSlice;->append(Landroid/os/Parcelable;)Z
 
     move-result v10
 
     if-eqz v10, :cond_6
 
-    .line 2945
     .end local v1           #ai:Landroid/content/pm/ApplicationInfo;
     .end local v8           #packageName:Ljava/lang/String;
     :goto_4
     if-ne v2, v0, :cond_4
 
-    .line 2946
     const/4 v10, 0x1
 
     invoke-virtual {v5, v10}, Landroid/content/pm/ParceledListSlice;->setLastSlice(Z)V
 
-    .line 2948
     :cond_4
     monitor-exit v11
 
-    .line 2950
     return-object v5
 
-    .line 2933
     .restart local v1       #ai:Landroid/content/pm/ApplicationInfo;
     .restart local v8       #packageName:Ljava/lang/String;
     :cond_5

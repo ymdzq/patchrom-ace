@@ -76,85 +76,98 @@
 
     move-result v9
 
-    if-eqz v9, :cond_1
+    if-eqz v9, :cond_2
 
-    .line 486
+    .line 487
+    sget-short v9, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v10, 0x50
+
+    if-ne v9, v10, :cond_0
+
+    .line 488
+    iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
+
+    invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->HtcCustomzie_KTResetRetrySequence()V
+
+    .line 491
+    :cond_0
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x1
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mIsScreenOn:Z
 
-    .line 488
+    .line 493
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x1
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mScreenActionFlag:Z
 
-    .line 490
+    .line 495
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->stopNetStatPoll()V
 
-    .line 493
+    .line 498
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->startNetStatPollwithoutResetPollStatus()V
 
-    .line 495
+    .line 500
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->restartDataStallAlarm()V
 
-    .line 613
-    :cond_0
+    .line 618
+    :cond_1
     :goto_0
     return-void
 
-    .line 496
-    :cond_1
+    .line 501
+    :cond_2
     const-string v9, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_2
+    if-eqz v9, :cond_3
 
-    .line 497
+    .line 502
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x0
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mIsScreenOn:Z
 
-    .line 499
+    .line 504
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x1
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mScreenActionFlag:Z
 
-    .line 501
+    .line 506
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->stopNetStatPoll()V
 
-    .line 504
+    .line 509
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->startNetStatPollwithoutResetPollStatus()V
 
-    .line 506
+    .line 511
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->restartDataStallAlarm()V
 
     goto :goto_0
 
-    .line 507
-    :cond_2
+    .line 512
+    :cond_3
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->getActionIntentReconnectAlarm()Ljava/lang/String;
@@ -165,9 +178,9 @@
 
     move-result v9
 
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_4
 
-    .line 508
+    .line 513
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -194,15 +207,15 @@
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 509
+    .line 514
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, p2}, Lcom/android/internal/telephony/DataConnectionTracker;->onActionIntentReconnectAlarm(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 510
-    :cond_3
+    .line 515
+    :cond_4
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9}, Lcom/android/internal/telephony/DataConnectionTracker;->getActionIntentDataStallAlarm()Ljava/lang/String;
@@ -213,26 +226,26 @@
 
     move-result v9
 
-    if-eqz v9, :cond_4
+    if-eqz v9, :cond_5
 
-    .line 511
+    .line 516
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, p2}, Lcom/android/internal/telephony/DataConnectionTracker;->onActionIntentDataStallAlarm(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 512
-    :cond_4
+    .line 517
+    :cond_5
     const-string v9, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_8
+    if-eqz v9, :cond_9
 
-    .line 513
+    .line 518
     const-string v9, "networkInfo"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -241,37 +254,37 @@
 
     check-cast v3, Landroid/net/NetworkInfo;
 
-    .line 515
+    .line 520
     .local v3, networkInfo:Landroid/net/NetworkInfo;
     iget-object v10, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v9
 
-    if-eqz v9, :cond_6
+    if-eqz v9, :cond_7
 
     const/4 v9, 0x1
 
     :goto_1
     iput-boolean v9, v10, Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
 
-    .line 519
+    .line 524
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     iget-boolean v9, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
 
-    if-eqz v9, :cond_7
+    if-eqz v9, :cond_8
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_7
+    if-eqz v9, :cond_8
 
-    .line 521
+    .line 526
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     iget-object v9, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mPhone:Lcom/android/internal/telephony/PhoneBase;
@@ -288,7 +301,7 @@
 
     check-cast v8, Landroid/net/wifi/WifiManager;
 
-    .line 522
+    .line 527
     .local v8, wifi:Landroid/net/wifi/WifiManager;
     invoke-virtual {v8}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -298,9 +311,9 @@
 
     move-result-object v6
 
-    .line 523
+    .line 528
     .local v6, strSsid:Ljava/lang/String;
-    if-eqz v6, :cond_0
+    if-eqz v6, :cond_1
 
     const-string v9, "ChinaNet"
 
@@ -308,7 +321,7 @@
 
     move-result v9
 
-    if-nez v9, :cond_5
+    if-nez v9, :cond_6
 
     const-string v9, "ChinaNet_CW"
 
@@ -316,7 +329,7 @@
 
     move-result v9
 
-    if-nez v9, :cond_5
+    if-nez v9, :cond_6
 
     const-string v9, "ChinaNet_HomeCW"
 
@@ -324,17 +337,17 @@
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 524
-    :cond_5
+    .line 529
+    :cond_6
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "[HTCCW]connected with CT C+W wifi AP"
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 531
+    .line 536
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x42029
@@ -343,52 +356,52 @@
 
     move-result-object v2
 
-    .line 532
+    .line 537
     .local v2, msg:Landroid/os/Message;
     const/4 v9, 0x1
 
     iput v9, v2, Landroid/os/Message;->arg1:I
 
-    .line 533
+    .line 538
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, v2}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
-    .line 515
+    .line 520
     .end local v2           #msg:Landroid/os/Message;
     .end local v6           #strSsid:Ljava/lang/String;
     .end local v8           #wifi:Landroid/net/wifi/WifiManager;
-    :cond_6
+    :cond_7
     const/4 v9, 0x0
 
     goto :goto_1
 
-    .line 535
-    :cond_7
+    .line 540
+    :cond_8
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
     move-result-object v9
 
     sget-object v10, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
-    if-ne v9, v10, :cond_0
+    if-ne v9, v10, :cond_1
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 537
+    .line 542
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "[HTCCW]wifi disconnect scenario 1"
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 538
+    .line 543
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x42029
@@ -397,32 +410,32 @@
 
     move-result-object v2
 
-    .line 539
+    .line 544
     .restart local v2       #msg:Landroid/os/Message;
     const/4 v9, 0x0
 
     iput v9, v2, Landroid/os/Message;->arg1:I
 
-    .line 540
+    .line 545
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, v2}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
-    .line 545
+    .line 550
     .end local v2           #msg:Landroid/os/Message;
     .end local v3           #networkInfo:Landroid/net/NetworkInfo;
-    :cond_8
+    :cond_9
     const-string v9, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_a
+    if-eqz v9, :cond_b
 
-    .line 546
+    .line 551
     const-string v9, "wifi_state"
 
     const/4 v10, 0x4
@@ -433,37 +446,37 @@
 
     const/4 v10, 0x3
 
-    if-ne v9, v10, :cond_9
+    if-ne v9, v10, :cond_a
 
     const/4 v1, 0x1
 
-    .line 549
+    .line 554
     .local v1, enabled:Z
     :goto_2
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
-    .line 552
+    .line 557
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x0
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
 
-    .line 554
+    .line 559
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 555
+    .line 560
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "[HTCCW]wifi disconnect scenario 2"
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 556
+    .line 561
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x42029
@@ -472,44 +485,44 @@
 
     move-result-object v2
 
-    .line 557
+    .line 562
     .restart local v2       #msg:Landroid/os/Message;
     const/4 v9, 0x0
 
     iput v9, v2, Landroid/os/Message;->arg1:I
 
-    .line 558
+    .line 563
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, v2}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
-    .line 546
+    .line 551
     .end local v1           #enabled:Z
     .end local v2           #msg:Landroid/os/Message;
-    :cond_9
+    :cond_a
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 562
-    :cond_a
+    .line 567
+    :cond_b
     const-string v9, "android.net.wifi.supplicant.STATE_CHANGE"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_b
+    if-eqz v9, :cond_c
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_b
+    if-eqz v9, :cond_c
 
-    .line 563
+    .line 568
     const-string v9, "newState"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -518,26 +531,26 @@
 
     check-cast v7, Landroid/net/wifi/SupplicantState;
 
-    .line 565
+    .line 570
     .local v7, supplState:Landroid/net/wifi/SupplicantState;
     sget-object v9, Landroid/net/wifi/SupplicantState;->DISCONNECTED:Landroid/net/wifi/SupplicantState;
 
-    if-ne v7, v9, :cond_0
+    if-ne v7, v9, :cond_1
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 567
+    .line 572
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "[HTCCW]wifi disconnect scenario 3"
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 568
+    .line 573
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x42029
@@ -546,38 +559,38 @@
 
     move-result-object v2
 
-    .line 569
+    .line 574
     .restart local v2       #msg:Landroid/os/Message;
     const/4 v9, 0x0
 
     iput v9, v2, Landroid/os/Message;->arg1:I
 
-    .line 570
+    .line 575
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, v2}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
-    .line 573
+    .line 578
     .end local v2           #msg:Landroid/os/Message;
     .end local v7           #supplState:Landroid/net/wifi/SupplicantState;
-    :cond_b
+    :cond_c
     const-string v9, "com.android.internal.telephony.dataconnectiontracker.intent_set_fail_data_setup_counter"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_c
+    if-eqz v9, :cond_d
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_c
+    if-eqz v9, :cond_d
 
-    .line 574
+    .line 579
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "fail_data_setup_counter"
@@ -590,7 +603,7 @@
 
     iput v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mFailDataSetupCounter:I
 
-    .line 575
+    .line 580
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const-string v10, "fail_data_setup_fail_cause"
@@ -611,7 +624,7 @@
 
     iput-object v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mFailDataSetupFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    .line 578
+    .line 583
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -654,23 +667,23 @@
 
     goto/16 :goto_0
 
-    .line 581
-    :cond_c
+    .line 586
+    :cond_d
     const-string v9, "android.intent.action.ACTION_CW_REGISTRATION_STATE_CHANGED"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_d
+    if-eqz v9, :cond_e
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_d
+    if-eqz v9, :cond_e
 
-    .line 582
+    .line 587
     const-string v9, "cw_reg_state"
 
     const/4 v10, 0x0
@@ -679,7 +692,7 @@
 
     move-result v5
 
-    .line 583
+    .line 588
     .local v5, status:I
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
@@ -703,7 +716,7 @@
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 585
+    .line 590
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x42028
@@ -712,36 +725,36 @@
 
     move-result-object v2
 
-    .line 586
+    .line 591
     .restart local v2       #msg:Landroid/os/Message;
     iput v5, v2, Landroid/os/Message;->arg1:I
 
-    .line 587
+    .line 592
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v9, v2}, Lcom/android/internal/telephony/DataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
-    .line 588
+    .line 593
     .end local v2           #msg:Landroid/os/Message;
     .end local v5           #status:I
-    :cond_d
+    :cond_e
     const-string v9, "android.intent.action.ACTION_CW_SIP_INVITE_RESULT"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isCWDataConnectionSupported()Z
 
     move-result v9
 
-    if-eqz v9, :cond_0
+    if-eqz v9, :cond_1
 
-    .line 589
+    .line 594
     const-string v9, "cw_sip_invite_result"
 
     const/4 v10, 0x0
@@ -750,7 +763,7 @@
 
     move-result v4
 
-    .line 590
+    .line 595
     .local v4, retCode:I
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
@@ -774,19 +787,19 @@
 
     invoke-virtual {v9, v10}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 592
+    .line 597
     const/16 v9, 0xc9
 
-    if-ne v4, v9, :cond_e
+    if-ne v4, v9, :cond_f
 
-    .line 593
+    .line 598
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x1
 
     iput-boolean v10, v9, Lcom/android/internal/telephony/DataConnectionTracker;->mSipInviteOK:Z
 
-    .line 598
+    .line 603
     :goto_3
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
@@ -794,9 +807,9 @@
 
     const/16 v10, 0x65
 
-    if-ne v9, v10, :cond_0
+    if-ne v9, v10, :cond_1
 
-    .line 599
+    .line 604
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const v10, 0x4202a
@@ -805,23 +818,23 @@
 
     move-result-object v2
 
-    .line 600
+    .line 605
     .restart local v2       #msg:Landroid/os/Message;
     const/4 v9, 0x1
 
     iput v9, v2, Landroid/os/Message;->arg1:I
 
-    .line 602
+    .line 607
     const/16 v9, 0xc9
 
-    if-ne v4, v9, :cond_f
+    if-ne v4, v9, :cond_10
 
-    .line 603
+    .line 608
     const/4 v9, 0x1
 
     iput v9, v2, Landroid/os/Message;->arg2:I
 
-    .line 608
+    .line 613
     :goto_4
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
@@ -829,9 +842,9 @@
 
     goto/16 :goto_0
 
-    .line 595
+    .line 600
     .end local v2           #msg:Landroid/os/Message;
-    :cond_e
+    :cond_f
     iget-object v9, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     const/4 v10, 0x0
@@ -840,9 +853,9 @@
 
     goto :goto_3
 
-    .line 605
+    .line 610
     .restart local v2       #msg:Landroid/os/Message;
-    :cond_f
+    :cond_10
     const/4 v9, 0x0
 
     iput v9, v2, Landroid/os/Message;->arg2:I

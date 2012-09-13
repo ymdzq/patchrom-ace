@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5704
+    .line 5711
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +38,7 @@
     .locals 2
 
     .prologue
-    .line 5708
+    .line 5715
     const v0, 0xc365
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->getName()Ljava/lang/String;
@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 5709
+    .line 5716
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .parameter "message"
 
     .prologue
-    .line 5717
+    .line 5724
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -65,14 +65,14 @@
 
     sparse-switch v33, :sswitch_data_0
 
-    .line 6043
+    .line 6050
     const/16 v33, 0x0
 
-    .line 6046
+    .line 6053
     :goto_0
     return v33
 
-    .line 5719
+    .line 5726
     :sswitch_0
     move-object/from16 v0, p0
 
@@ -89,7 +89,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/SupplicantStateTracker;->sendMessage(I)V
 
-    .line 6045
+    .line 6052
     :cond_0
     :goto_1
     const v33, 0xc366
@@ -102,12 +102,12 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 6046
+    .line 6053
     const/16 v33, 0x1
 
     goto :goto_0
 
-    .line 5723
+    .line 5730
     :sswitch_1
     move-object/from16 v0, p0
 
@@ -122,7 +122,7 @@
 
     goto :goto_1
 
-    .line 5726
+    .line 5733
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -139,7 +139,7 @@
 
     move-result-object v27
 
-    .line 5731
+    .line 5738
     .local v27, state:Landroid/net/wifi/SupplicantState;
     invoke-static/range {v27 .. v27}, Landroid/net/wifi/SupplicantState;->isDriverActive(Landroid/net/wifi/SupplicantState;)Z
 
@@ -147,7 +147,7 @@
 
     if-nez v33, :cond_2
 
-    .line 5732
+    .line 5739
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -171,7 +171,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 5733
+    .line 5740
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -181,7 +181,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->handleNetworkDisconnect()V
     invoke-static/range {v33 .. v33}, Landroid/net/wifi/WifiStateMachine;->access$6800(Landroid/net/wifi/WifiStateMachine;)V
 
-    .line 5735
+    .line 5742
     :cond_1
     move-object/from16 v0, p0
 
@@ -205,7 +205,7 @@
 
     goto :goto_1
 
-    .line 5744
+    .line 5751
     :cond_2
     sget-object v33, Landroid/net/wifi/SupplicantState;->DISCONNECTED:Landroid/net/wifi/SupplicantState;
 
@@ -238,7 +238,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 5747
+    .line 5754
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -248,7 +248,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->handleNetworkDisconnect()V
     invoke-static/range {v33 .. v33}, Landroid/net/wifi/WifiStateMachine;->access$6800(Landroid/net/wifi/WifiStateMachine;)V
 
-    .line 5748
+    .line 5755
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -271,26 +271,26 @@
 
     goto/16 :goto_1
 
-    .line 5753
+    .line 5760
     .end local v27           #state:Landroid/net/wifi/SupplicantState;
     :sswitch_3
     invoke-static {}, Landroid/net/wifi/WifiNative;->disconnectCommand()Z
 
     goto/16 :goto_1
 
-    .line 5756
+    .line 5763
     :sswitch_4
     invoke-static {}, Landroid/net/wifi/WifiNative;->reconnectCommand()Z
 
     goto/16 :goto_1
 
-    .line 5759
+    .line 5766
     :sswitch_5
     invoke-static {}, Landroid/net/wifi/WifiNative;->reassociateCommand()Z
 
     goto/16 :goto_1
 
-    .line 5762
+    .line 5769
     :sswitch_6
     move-object/from16 v0, p1
 
@@ -298,7 +298,7 @@
 
     move/from16 v18, v0
 
-    .line 5763
+    .line 5770
     .local v18, netId:I
     move-object/from16 v0, p1
 
@@ -306,16 +306,16 @@
 
     check-cast v10, Landroid/net/wifi/WifiConfiguration;
 
-    .line 5772
+    .line 5779
     .local v10, config:Landroid/net/wifi/WifiConfiguration;
     if-eqz v10, :cond_3
 
-    .line 5773
+    .line 5780
     invoke-static {v10}, Landroid/net/wifi/WifiConfigStore;->selectNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result v18
 
-    .line 5779
+    .line 5786
     :goto_2
     move-object/from16 v0, p0
 
@@ -332,10 +332,10 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/SupplicantStateTracker;->sendMessage(I)V
 
-    .line 5781
+    .line 5788
     invoke-static {}, Landroid/net/wifi/WifiNative;->reconnectCommand()Z
 
-    .line 5782
+    .line 5789
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -349,7 +349,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mLastExplicitNetworkId:I
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$11402(Landroid/net/wifi/WifiStateMachine;I)I
 
-    .line 5783
+    .line 5790
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -363,7 +363,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mLastNetworkChoiceTime:J
     invoke-static/range {v33 .. v35}, Landroid/net/wifi/WifiStateMachine;->access$11502(Landroid/net/wifi/WifiStateMachine;J)J
 
-    .line 5784
+    .line 5791
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -375,7 +375,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mNextWifiActionExplicit:Z
     invoke-static/range {v33 .. v34}, Landroid/net/wifi/WifiStateMachine;->access$11602(Landroid/net/wifi/WifiStateMachine;Z)Z
 
-    .line 5787
+    .line 5794
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -398,13 +398,13 @@
 
     goto/16 :goto_1
 
-    .line 5775
+    .line 5782
     :cond_3
     invoke-static/range {v18 .. v18}, Landroid/net/wifi/WifiConfigStore;->selectNetwork(I)V
 
     goto :goto_2
 
-    .line 5790
+    .line 5797
     .end local v10           #config:Landroid/net/wifi/WifiConfiguration;
     .end local v18           #netId:I
     :sswitch_7
@@ -425,7 +425,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WpsStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 5791
+    .line 5798
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -448,7 +448,7 @@
 
     goto/16 :goto_1
 
-    .line 5795
+    .line 5802
     :sswitch_8
     move-object/from16 v0, p0
 
@@ -469,7 +469,7 @@
 
     goto/16 :goto_1
 
-    .line 5798
+    .line 5805
     :sswitch_9
     const-string v33, "WifiStateMachine"
 
@@ -477,7 +477,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5799
+    .line 5806
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -489,7 +489,7 @@
 
     goto/16 :goto_1
 
-    .line 5802
+    .line 5809
     :sswitch_a
     const-string v33, "WifiStateMachine"
 
@@ -497,7 +497,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5803
+    .line 5810
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -509,16 +509,16 @@
 
     goto/16 :goto_1
 
-    .line 5806
+    .line 5813
     :sswitch_b
     sget-boolean v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_EAP_AKA_flag:Z
 
     if-eqz v33, :cond_0
 
-    .line 5807
+    .line 5814
     monitor-enter p0
 
-    .line 5808
+    .line 5815
     :try_start_0
     move-object/from16 v0, p0
 
@@ -539,7 +539,7 @@
 
     check-cast v17, Landroid/telephony/TelephonyManager;
 
-    .line 5809
+    .line 5816
     .local v17, mTelephonyManager:Landroid/telephony/TelephonyManager;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -585,7 +585,7 @@
 
     move-result-object v4
 
-    .line 5810
+    .line 5817
     .local v4, MsgDetail:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -597,7 +597,7 @@
 
     invoke-virtual {v0, v4}, Landroid/net/wifi/WifiStateMachine;->CtrlMsg(Ljava/lang/String;)Z
 
-    .line 5811
+    .line 5818
     monitor-exit p0
 
     goto/16 :goto_1
@@ -613,16 +613,16 @@
 
     throw v33
 
-    .line 5815
+    .line 5822
     :sswitch_c
     sget-boolean v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_EAP_AKA_flag:Z
 
     if-eqz v33, :cond_0
 
-    .line 5816
+    .line 5823
     monitor-enter p0
 
-    .line 5817
+    .line 5824
     :try_start_1
     move-object/from16 v0, p0
 
@@ -643,7 +643,7 @@
 
     check-cast v17, Landroid/telephony/TelephonyManager;
 
-    .line 5818
+    .line 5825
     .restart local v17       #mTelephonyManager:Landroid/telephony/TelephonyManager;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -689,7 +689,7 @@
 
     move-result-object v4
 
-    .line 5819
+    .line 5826
     .restart local v4       #MsgDetail:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -701,7 +701,7 @@
 
     invoke-virtual {v0, v4}, Landroid/net/wifi/WifiStateMachine;->CtrlMsg(Ljava/lang/String;)Z
 
-    .line 5820
+    .line 5827
     monitor-exit p0
 
     goto/16 :goto_1
@@ -717,23 +717,23 @@
 
     throw v33
 
-    .line 5824
+    .line 5831
     :sswitch_d
     sget-boolean v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_EAP_AKA_flag:Z
 
     if-eqz v33, :cond_0
 
-    .line 5825
+    .line 5832
     const-string v5, "CTRL-DAT-"
 
     .local v5, MsgDetail0:Ljava/lang/String;
     const-string v4, "FAIL"
 
-    .line 5828
+    .line 5835
     .restart local v4       #MsgDetail:Ljava/lang/String;
     const/16 v28, 0x0
 
-    .line 5829
+    .line 5836
     .local v28, szAutn:Ljava/lang/String;
     const/16 v33, 0x3
 
@@ -744,7 +744,7 @@
 
     move-object/from16 v29, v0
 
-    .line 5831
+    .line 5838
     .local v29, szRand:[Ljava/lang/String;
     const-string/jumbo v33, "phone"
 
@@ -756,7 +756,7 @@
 
     move-result-object v19
 
-    .line 5832
+    .line 5839
     .local v19, phoneInterface:Lcom/android/internal/telephony/ITelephony;
     const-string/jumbo v33, "htctelephony"
 
@@ -768,11 +768,11 @@
 
     move-result-object v13
 
-    .line 5833
+    .line 5840
     .local v13, ihtcPhoneInterface:Lcom/android/internal/telephony/IHtcTelephony;
     const/4 v7, 0x0
 
-    .line 5835
+    .line 5842
     .local v7, aszRspResult:[Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -785,7 +785,7 @@
     .local v31, szTmpMsg0:Ljava/lang/String;
     move-object/from16 v30, v31
 
-    .line 5836
+    .line 5843
     .local v30, szTmpMsg:Ljava/lang/String;
     const/16 v33, 0x3a
 
@@ -797,7 +797,7 @@
 
     move-result v6
 
-    .line 5837
+    .line 5844
     .local v6, MsgEnd:I
     const/16 v33, -0x1
 
@@ -805,12 +805,12 @@
 
     if-ne v6, v0, :cond_4
 
-    .line 5838
+    .line 5845
     invoke-virtual/range {v30 .. v30}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    .line 5839
+    .line 5846
     :cond_4
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -846,7 +846,7 @@
 
     move-result-object v5
 
-    .line 5840
+    .line 5847
     add-int/lit8 v33, v6, 0x1
 
     move-object/from16 v0, v30
@@ -857,7 +857,7 @@
 
     move-result-object v30
 
-    .line 5841
+    .line 5848
     const/16 v33, 0x3a
 
     move-object/from16 v0, v30
@@ -868,14 +868,14 @@
 
     move-result v6
 
-    .line 5842
+    .line 5849
     const/16 v33, -0x1
 
     move/from16 v0, v33
 
     if-eq v6, v0, :cond_5
 
-    .line 5843
+    .line 5850
     const/16 v33, 0x0
 
     const/16 v34, 0x0
@@ -890,7 +890,7 @@
 
     aput-object v34, v29, v33
 
-    .line 5844
+    .line 5851
     add-int/lit8 v33, v6, 0x1
 
     move-object/from16 v0, v30
@@ -901,7 +901,7 @@
 
     move-result-object v30
 
-    .line 5847
+    .line 5854
     :cond_5
     const-string v33, "gsm.sim.types"
 
@@ -911,7 +911,7 @@
 
     move-result-object v22
 
-    .line 5850
+    .line 5857
     .local v22, simType:Ljava/lang/String;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -933,7 +933,7 @@
 
     move-result-object v24
 
-    .line 5851
+    .line 5858
     .local v24, simType3G:Ljava/lang/String;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -955,7 +955,7 @@
 
     move-result-object v23
 
-    .line 5852
+    .line 5859
     .local v23, simType2G:Ljava/lang/String;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -977,7 +977,7 @@
 
     move-result-object v25
 
-    .line 5853
+    .line 5860
     .local v25, simTypeDBDM:Ljava/lang/String;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -999,7 +999,7 @@
 
     move-result-object v26
 
-    .line 5855
+    .line 5862
     .local v26, simTypeWIBRO_ONLY:Ljava/lang/String;
     const-string v33, "AUTH_AKA-"
 
@@ -1013,7 +1013,7 @@
 
     if-eqz v33, :cond_d
 
-    .line 5856
+    .line 5863
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
@@ -1044,11 +1044,11 @@
 
     if-eqz v33, :cond_c
 
-    .line 5857
+    .line 5864
     :cond_6
     move-object/from16 v28, v30
 
-    .line 5858
+    .line 5865
     sget-short v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v34, 0x3e
@@ -1059,14 +1059,14 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 5860
+    .line 5867
     const/4 v9, 0x0
 
-    .line 5861
+    .line 5868
     .local v9, bundle:Landroid/os/Bundle;
     const/4 v12, 0x0
 
-    .line 5863
+    .line 5870
     .local v12, i:I
     const-string v33, "WifiStateMachine"
 
@@ -1094,7 +1094,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5864
+    .line 5871
     const-string v33, "WifiStateMachine"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -1121,7 +1121,7 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5866
+    .line 5873
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -1137,7 +1137,7 @@
 
     move-result-object v20
 
-    .line 5867
+    .line 5874
     .local v20, rand:[B
     move-object/from16 v0, p0
 
@@ -1154,7 +1154,7 @@
 
     move-result-object v8
 
-    .line 5868
+    .line 5875
     .local v8, autn:[B
     move-object/from16 v0, v20
 
@@ -1162,10 +1162,10 @@
 
     move-result-object v9
 
-    .line 5869
+    .line 5876
     if-eqz v9, :cond_8
 
-    .line 5870
+    .line 5877
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -1184,7 +1184,7 @@
 
     move-result-object v21
 
-    .line 5871
+    .line 5878
     .local v21, res:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1204,7 +1204,7 @@
 
     move-result-object v2
 
-    .line 5872
+    .line 5879
     .local v2, Ck:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1224,7 +1224,7 @@
 
     move-result-object v3
 
-    .line 5873
+    .line 5880
     .local v3, Ik:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1244,7 +1244,7 @@
 
     move-result-object v16
 
-    .line 5875
+    .line 5882
     .local v16, kc:Ljava/lang/String;
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -1306,7 +1306,7 @@
 
     move-result-object v4
 
-    .line 5879
+    .line 5886
     const-string v33, "WifiStateMachine"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -1333,7 +1333,7 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 5979
+    .line 5986
     .end local v2           #Ck:Ljava/lang/String;
     .end local v3           #Ik:Ljava/lang/String;
     .end local v6           #MsgEnd:I
@@ -1386,7 +1386,7 @@
 
     goto/16 :goto_1
 
-    .line 5882
+    .line 5889
     .restart local v6       #MsgEnd:I
     .restart local v7       #aszRspResult:[Ljava/lang/String;
     .restart local v8       #autn:[B
@@ -1411,12 +1411,12 @@
 
     invoke-static/range {v33 .. v34}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5883
+    .line 5890
     const-string v4, "FAIL"
 
     goto :goto_3
 
-    .line 5888
+    .line 5895
     .end local v8           #autn:[B
     .end local v9           #bundle:Landroid/os/Bundle;
     .end local v12           #i:I
@@ -1458,7 +1458,7 @@
 
     move-result-object v30
 
-    .line 5889
+    .line 5896
     move-object/from16 v0, v19
 
     move-object/from16 v1, v30
@@ -1467,10 +1467,10 @@
 
     move-result-object v7
 
-    .line 5890
+    .line 5897
     if-eqz v7, :cond_b
 
-    .line 5891
+    .line 5898
     const/16 v33, 0x0
 
     aget-object v33, v7, v33
@@ -1597,7 +1597,7 @@
 
     if-eqz v33, :cond_a
 
-    .line 5898
+    .line 5905
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -1694,13 +1694,13 @@
 
     move-result-object v4
 
-    .line 5909
+    .line 5916
     :goto_4
     const/4 v7, 0x0
 
     goto/16 :goto_3
 
-    .line 5904
+    .line 5911
     :cond_a
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -1726,19 +1726,19 @@
 
     goto :goto_4
 
-    .line 5907
+    .line 5914
     :cond_b
     const-string v4, "FAIL"
 
     goto :goto_4
 
-    .line 5913
+    .line 5920
     :cond_c
     const-string/jumbo v4, "null"
 
     goto/16 :goto_3
 
-    .line 5915
+    .line 5922
     :cond_d
     const-string v33, "AUTH_SIM-"
 
@@ -1752,7 +1752,7 @@
 
     if-eqz v33, :cond_7
 
-    .line 5916
+    .line 5923
     const/16 v33, 0x3a
 
     move-object/from16 v0, v30
@@ -1763,14 +1763,14 @@
 
     move-result v6
 
-    .line 5917
+    .line 5924
     const/16 v33, -0x1
 
     move/from16 v0, v33
 
     if-eq v6, v0, :cond_e
 
-    .line 5918
+    .line 5925
     const/16 v33, 0x1
 
     const/16 v34, 0x0
@@ -1785,7 +1785,7 @@
 
     aput-object v34, v29, v33
 
-    .line 5919
+    .line 5926
     const/16 v33, 0x2
 
     add-int/lit8 v34, v6, 0x1
@@ -1800,11 +1800,11 @@
 
     aput-object v34, v29, v33
 
-    .line 5922
+    .line 5929
     :cond_e
     const-string v4, "OK"
 
-    .line 5923
+    .line 5930
     const/4 v14, 0x0
 
     .local v14, ii:I
@@ -1815,7 +1815,7 @@
 
     if-ge v14, v0, :cond_7
 
-    .line 5924
+    .line 5931
     aget-object v33, v29, v14
 
     invoke-virtual/range {v33 .. v33}, Ljava/lang/String;->length()I
@@ -1830,7 +1830,7 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 5925
+    .line 5932
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
@@ -1861,11 +1861,11 @@
 
     if-eqz v33, :cond_11
 
-    .line 5926
+    .line 5933
     :cond_f
     const-string v30, "008800801110"
 
-    .line 5931
+    .line 5938
     :goto_6
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -1889,7 +1889,7 @@
 
     move-result-object v30
 
-    .line 5933
+    .line 5940
     move-object/from16 v0, v19
 
     move-object/from16 v1, v30
@@ -1898,10 +1898,10 @@
 
     move-result-object v7
 
-    .line 5934
+    .line 5941
     if-eqz v7, :cond_15
 
-    .line 5935
+    .line 5942
     move-object/from16 v0, v22
 
     move-object/from16 v1, v24
@@ -1932,7 +1932,7 @@
 
     if-eqz v33, :cond_13
 
-    .line 5936
+    .line 5943
     :cond_10
     const/16 v33, 0x0
 
@@ -2020,7 +2020,7 @@
 
     if-eqz v33, :cond_12
 
-    .line 5941
+    .line 5948
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -2079,16 +2079,16 @@
 
     move-result-object v4
 
-    .line 5966
+    .line 5973
     :goto_7
     const/4 v7, 0x0
 
-    .line 5923
+    .line 5930
     add-int/lit8 v14, v14, 0x1
 
     goto/16 :goto_5
 
-    .line 5927
+    .line 5934
     :cond_11
     invoke-virtual/range {v22 .. v23}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2096,12 +2096,12 @@
 
     if-eqz v33, :cond_7
 
-    .line 5928
+    .line 5935
     const-string v30, "A088000010"
 
     goto/16 :goto_6
 
-    .line 5945
+    .line 5952
     :cond_12
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -2125,10 +2125,10 @@
 
     move-result-object v4
 
-    .line 5946
+    .line 5953
     goto/16 :goto_3
 
-    .line 5950
+    .line 5957
     :cond_13
     const/16 v33, 0x0
 
@@ -2176,7 +2176,7 @@
 
     if-eqz v33, :cond_14
 
-    .line 5953
+    .line 5960
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -2237,7 +2237,7 @@
 
     goto/16 :goto_7
 
-    .line 5957
+    .line 5964
     :cond_14
     new-instance v33, Ljava/lang/StringBuilder;
 
@@ -2261,26 +2261,26 @@
 
     move-result-object v4
 
-    .line 5958
+    .line 5965
     goto/16 :goto_3
 
-    .line 5963
+    .line 5970
     :cond_15
     const-string v4, "FAIL"
 
-    .line 5964
+    .line 5971
     goto/16 :goto_3
 
-    .line 5969
+    .line 5976
     :cond_16
     const-string v4, "FAIL"
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 5970
+    .line 5977
     goto/16 :goto_3
 
-    .line 5976
+    .line 5983
     .end local v6           #MsgEnd:I
     .end local v7           #aszRspResult:[Ljava/lang/String;
     .end local v13           #ihtcPhoneInterface:Lcom/android/internal/telephony/IHtcTelephony;
@@ -2297,13 +2297,13 @@
     :catch_0
     move-exception v11
 
-    .line 5977
+    .line 5984
     .local v11, e:Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_3
 
-    .line 5983
+    .line 5990
     .end local v4           #MsgDetail:Ljava/lang/String;
     .end local v5           #MsgDetail0:Ljava/lang/String;
     .end local v11           #e:Ljava/lang/Exception;
@@ -2315,7 +2315,7 @@
 
     if-eqz v33, :cond_0
 
-    .line 5984
+    .line 5991
     new-instance v15, Landroid/content/Intent;
 
     const-string v33, "android.net.wifi.AKA_INVALID_SIM"
@@ -2324,7 +2324,7 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5985
+    .line 5992
     .local v15, intent:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -2341,7 +2341,7 @@
 
     invoke-virtual {v0, v15}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 5986
+    .line 5993
     const-string v33, "WifiStateMachine"
 
     const-string v34, "AKA: set intent AKA_INVALID_SIM_CHANGED_ACTION"
@@ -2350,7 +2350,7 @@
 
     goto/16 :goto_1
 
-    .line 5990
+    .line 5997
     .end local v15           #intent:Landroid/content/Intent;
     :sswitch_f
     sget-boolean v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_EAP_AKA_flag:Z
@@ -2370,7 +2370,7 @@
 
     if-eqz v33, :cond_0
 
-    .line 5991
+    .line 5998
     new-instance v33, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v33 .. v33}, Ljava/lang/StringBuilder;-><init>()V
@@ -2412,7 +2412,7 @@
 
     move-result-object v4
 
-    .line 5993
+    .line 6000
     .restart local v4       #MsgDetail:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2426,7 +2426,7 @@
 
     goto/16 :goto_1
 
-    .line 5997
+    .line 6004
     .end local v4           #MsgDetail:Ljava/lang/String;
     :sswitch_10
     sget-short v33, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
@@ -2439,14 +2439,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5998
+    .line 6005
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v33
 
     if-eqz v33, :cond_0
 
-    .line 5999
+    .line 6006
     move-object/from16 v0, p1
 
     iget-object v0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -2455,7 +2455,7 @@
 
     check-cast v32, Ljava/lang/String;
 
-    .line 6000
+    .line 6007
     .local v32, typeData:Ljava/lang/String;
     new-instance v15, Landroid/content/Intent;
 
@@ -2465,7 +2465,7 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6001
+    .line 6008
     .restart local v15       #intent:Landroid/content/Intent;
     const-string/jumbo v33, "typeData"
 
@@ -2475,7 +2475,7 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6002
+    .line 6009
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2491,7 +2491,7 @@
 
     invoke-virtual {v0, v15}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 6003
+    .line 6010
     const-string v33, "WifiStateMachine"
 
     new-instance v34, Ljava/lang/StringBuilder;
@@ -2520,7 +2520,7 @@
 
     goto/16 :goto_1
 
-    .line 6010
+    .line 6017
     .end local v15           #intent:Landroid/content/Intent;
     .end local v32           #typeData:Ljava/lang/String;
     :sswitch_11
@@ -2528,12 +2528,12 @@
 
     invoke-static/range {v33 .. v33}, Landroid/net/wifi/WifiNative;->setScanResultHandlingCommand(I)Z
 
-    .line 6012
+    .line 6019
     const/16 v33, 0x0
 
     goto/16 :goto_0
 
-    .line 6015
+    .line 6022
     :sswitch_12
     move-object/from16 v0, p0
 
@@ -2550,7 +2550,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mLastNetworkId:I
     invoke-static/range {v33 .. v34}, Landroid/net/wifi/WifiStateMachine;->access$5202(Landroid/net/wifi/WifiStateMachine;I)I
 
-    .line 6016
+    .line 6023
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2572,7 +2572,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mLastBssid:Ljava/lang/String;
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$5102(Landroid/net/wifi/WifiStateMachine;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 6019
+    .line 6026
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2597,7 +2597,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WifiInfo;->setSSID(Ljava/lang/String;)V
 
-    .line 6020
+    .line 6027
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2622,7 +2622,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WifiInfo;->setBSSID(Ljava/lang/String;)V
 
-    .line 6021
+    .line 6028
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2647,7 +2647,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WifiInfo;->setNetworkId(I)V
 
-    .line 6023
+    .line 6030
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2672,7 +2672,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WifiInfo;->setFrequency(I)V
 
-    .line 6025
+    .line 6032
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2741,7 +2741,7 @@
 
     if-gez v33, :cond_17
 
-    .line 6029
+    .line 6036
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2757,7 +2757,7 @@
 
     invoke-virtual/range {v33 .. v34}, Landroid/net/wifi/WifiInfo;->setExplicitConnect(Z)V
 
-    .line 6031
+    .line 6038
     :cond_17
     move-object/from16 v0, p0
 
@@ -2770,7 +2770,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mNextWifiActionExplicit:Z
     invoke-static/range {v33 .. v34}, Landroid/net/wifi/WifiStateMachine;->access$11602(Landroid/net/wifi/WifiStateMachine;Z)Z
 
-    .line 6033
+    .line 6040
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2782,7 +2782,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)V
     invoke-static/range {v33 .. v34}, Landroid/net/wifi/WifiStateMachine;->access$8700(Landroid/net/wifi/WifiStateMachine;Landroid/net/NetworkInfo$DetailedState;)V
 
-    .line 6034
+    .line 6041
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2803,7 +2803,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->sendNetworkStateChangeBroadcast(Ljava/lang/String;)V
     invoke-static/range {v33 .. v34}, Landroid/net/wifi/WifiStateMachine;->access$12600(Landroid/net/wifi/WifiStateMachine;Ljava/lang/String;)V
 
-    .line 6035
+    .line 6042
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2826,7 +2826,7 @@
 
     goto/16 :goto_1
 
-    .line 6039
+    .line 6046
     :sswitch_13
     move-object/from16 v0, p0
 
@@ -2837,7 +2837,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->handleNetworkDisconnect()V
     invoke-static/range {v33 .. v33}, Landroid/net/wifi/WifiStateMachine;->access$6800(Landroid/net/wifi/WifiStateMachine;)V
 
-    .line 6040
+    .line 6047
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/WifiStateMachine$ConnectModeState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -2860,7 +2860,7 @@
 
     goto/16 :goto_1
 
-    .line 5717
+    .line 5724
     :sswitch_data_0
     .sparse-switch
         0x20020 -> :sswitch_f

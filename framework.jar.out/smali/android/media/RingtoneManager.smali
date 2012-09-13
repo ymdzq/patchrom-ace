@@ -1445,8 +1445,10 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 838
     const/4 v0, 0x1
 
+    .line 839
     :goto_0
     return v0
 

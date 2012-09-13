@@ -2883,7 +2883,6 @@
 
     move-object/from16 v0, v31
 
-    .line 1562
     const-string v3, "landscape"
 
     const/4 v4, 0x1
@@ -2892,7 +2891,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1563
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/camera/HTCCamera$MainHandler;->this$0:Lcom/android/camera/HTCCamera;
@@ -2903,11 +2901,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1571
     :goto_a
     if-nez v22, :cond_2f
 
-    .line 1576
     :try_start_1
     const-string v3, "com.htc.album"
 
@@ -2917,7 +2913,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1577
+    .line 1562
     const-string v3, "landscape"
 
     const/4 v4, 0x1
@@ -2926,6 +2922,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    .line 1563
     .line 1578
     move-object/from16 v0, p0
 

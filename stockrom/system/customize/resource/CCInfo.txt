@@ -1,5 +1,5 @@
-﻿Project: Vivo_ICS_35_S
-SKU: HTCCN OC ROM
-ROM Build ID: 391049
-Build ID: 391050; SKU: HTCCN OC ROM default; CID: default; MNS: default
-Datetime: 2012/06/13 22:15:04
+﻿Project: SAGA_ICS_35_S
+SKU: HTCCN Open ROM
+ROM Build ID: 391691
+Build ID: 391692; SKU: HTCCN Open ROM default; CID: default; MNS: default
+Datetime: 2012/06/15 11:01:55

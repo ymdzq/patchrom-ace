@@ -40,7 +40,7 @@
     if-eqz p0, :cond_0
 
     .line 565
-    const v0, 0x1070032
+    const v0, 0x1070034
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

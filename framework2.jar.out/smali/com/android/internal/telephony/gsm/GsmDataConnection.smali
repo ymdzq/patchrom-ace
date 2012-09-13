@@ -84,12 +84,12 @@
     .parameter "address"
 
     .prologue
-    .line 190
+    .line 196
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 192
+    .line 198
     :goto_0
     return v0
 
@@ -263,21 +263,11 @@
     .parameter "domainNameServers"
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 149
-    const-string v2, "0.0.0.0"
-
-    aget-object v3, p1, v0
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
     const-string v2, "0.0.0.0"
 
     aget-object v3, p1, v1
@@ -286,7 +276,17 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_0
+
+    const-string v2, "0.0.0.0"
+
+    aget-object v3, p1, v0
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
 
     iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->phone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -294,22 +294,47 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    .line 169
+    .line 158
+    sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
+
+    const/16 v3, 0xa9
+
+    if-ne v2, v3, :cond_1
+
+    iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
+
+    iget-object v2, v2, Lcom/android/internal/telephony/ApnSetting;->apn:Ljava/lang/String;
+
+    const-string v3, "pruebaedge"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 187
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 175
+    :cond_1
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0x17
 
-    if-eq v2, v3, :cond_2
+    if-eq v2, v3, :cond_0
 
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
     const/4 v3, 0x2
 
-    if-eq v2, v3, :cond_2
+    if-eq v2, v3, :cond_0
 
-    .line 173
+    .line 179
     iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     const-string v3, "mms"
@@ -318,7 +343,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
@@ -328,9 +353,9 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    :cond_0
+    :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
     const-string v3, "httpproxy"
@@ -339,7 +364,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_3
 
     iget-object v2, p0, Lcom/android/internal/telephony/DataConnection;->mApn:Lcom/android/internal/telephony/ApnSetting;
 
@@ -349,16 +374,12 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_0
 
-    .line 181
-    :cond_1
-    :goto_0
-    return v0
-
-    :cond_2
+    :cond_3
     move v0, v1
 
+    .line 181
     goto :goto_0
 .end method
 
@@ -367,7 +388,7 @@
     .parameter "s"
 
     .prologue
-    .line 186
+    .line 192
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -404,7 +425,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
+    .line 193
     return-void
 .end method
 

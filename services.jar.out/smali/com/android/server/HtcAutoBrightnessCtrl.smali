@@ -627,7 +627,7 @@
 
     .line 311
     .local v2, resources:Landroid/content/res/Resources;
-    const v3, 0x1070026
+    const v3, 0x1070027
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
 

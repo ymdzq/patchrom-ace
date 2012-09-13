@@ -38,7 +38,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 4
 
     .prologue
     const/4 v1, 0x1
@@ -140,11 +140,25 @@
     :cond_2
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecordLoadedThread;->this$0:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;
 
-    const-string v1, "simLoaded"
+    const-string v1, "RecordLoadedThread: Send EVENT_TRY_SETUP_DATA Mesg to setup data call"
 
-    #calls: Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;->setupDataOnReadyApns(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;->access$2300(Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;->log(Ljava/lang/String;)V
 
     .line 2747
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecordLoadedThread;->this$0:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;
+
+    iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker$RecordLoadedThread;->this$0:Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;
+
+    const v2, 0x42003
+
+    const-string v3, "simLoaded"
+
+    invoke-virtual {v1, v2, v3}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmDataConnectionTracker;->sendMessage(Landroid/os/Message;)Z
+
+    .line 2749
     return-void
 .end method

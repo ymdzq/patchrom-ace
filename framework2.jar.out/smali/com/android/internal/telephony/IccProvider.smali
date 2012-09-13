@@ -79,6 +79,7 @@
     :goto_0
     sput-boolean v0, Lcom/android/internal/telephony/IccProvider;->VERIZON_WPHONE_CONFIG:Z
 
+    .line 211
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v3, "name"
@@ -95,8 +96,10 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccProvider;->ADDRESS_BOOK_COLUMN_NAMES:[Ljava/lang/String;
 
+    .line 225
     sput v1, Lcom/android/internal/telephony/IccProvider;->mUrl:I
 
+    .line 239
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -114,6 +117,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 244
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -122,6 +126,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 245
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -130,6 +135,7 @@
 
     invoke-virtual {v0, v1, v2, v5}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 247
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -140,7 +146,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 244
+    .line 250
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -151,8 +157,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 245
-    .line 250
     .line 251
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
@@ -485,7 +489,6 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 436
     goto :goto_0
 
     .end local v3           #email:Ljava/lang/String;
@@ -1178,7 +1181,6 @@
     .parameter "resolver"
 
     .prologue
-    .line 1152
     :try_start_0
     sget-object v1, Landroid/provider/HtcContactsContract$SpeedDial;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1510,7 +1512,6 @@
     .parameter "emails"
 
     .prologue
-    .line 1202
     new-instance v0, Landroid/accounts/Account;
 
     const-string v2, "SIM"
@@ -1634,7 +1635,6 @@
     :goto_0
     return v2
 
-    .line 589
     :cond_0
     sget-object v2, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
@@ -3336,12 +3336,9 @@
 
     move-result-object v0
 
-    .line 1023
-    .line 1071
     .local v0, simIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     if-eqz v0, :cond_0
 
-    .line 1072
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
@@ -3363,19 +3360,16 @@
 
     move-result-object v7
 
-    .line 1079
     .end local v0           #simIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     :cond_0
     :goto_0
     return-object v7
 
-    .line 1076
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 1074
     :catch_1
     move-exception v1
 

@@ -1,6 +1,6 @@
-TaskID : 265968
-Project : VIVO_ICS_35_S
+TaskID : 266765
+Project : SAGA_ICS_35_S
 SKU : HTCCN CHS[1400]
-ROM Ver : 4.08.1400.5
-Customization Id : 391049
-RCMS Id : 98
+ROM Ver : 3.07.1400.2
+Customization Id : 391691
+RCMS Id : 228
