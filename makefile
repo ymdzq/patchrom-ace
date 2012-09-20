@@ -27,7 +27,7 @@ local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvide
 local-phone-apps := ApplicationsProvider BackupRestoreConfirmation Bluetooth BrcmBluetoothServices \
 	CertInstaller DefaultContainerService DFPI DrmProvider FilePicker \
 	HTC_IME HTCCamera HtcFMRadio com.htc.FMRadioWidget  HTMLViewer KeyChain LMW  \
-	NoiseField PluginManager SDCardWizard SharedStorageBackup BlueSky Stk \
+	NoiseField PluginManager SDCardWizard SharedStorageBackup Stk \
 	TrimIt UploadProvider Usage UserDictionaryProvider WifiRouter \
 	CustomizationSettingsProvider SettingsProvider HTCAlbum MediaProvider \
 	PhaseBeam
