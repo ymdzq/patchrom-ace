@@ -19,7 +19,7 @@ local-modified-jars := HTCExtension framework2
 
 local-miui-modified-apps := Phone ThemeManager Mms MiuiHome Settings MiuiGallery
 # All apks from MIUI
-local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvider
+local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvider NetworkLocation
 
 
 #local-remove-apps := Twitter  
@@ -27,7 +27,7 @@ local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvide
 local-phone-apps := ApplicationsProvider BackupRestoreConfirmation Bluetooth BrcmBluetoothServices \
 	CertInstaller DefaultContainerService DFPI DrmProvider FilePicker \
 	HTC_IME HTCCamera HtcFMRadio com.htc.FMRadioWidget  HTMLViewer KeyChain LMW  \
-	NoiseField PluginManager SDCardWizard SharedStorageBackup Stk \
+	NetworkLocation NoiseField PluginManager SDCardWizard SharedStorageBackup Stk \
 	TrimIt UploadProvider Usage UserDictionaryProvider WifiRouter \
 	CustomizationSettingsProvider SettingsProvider HTCAlbum MediaProvider \
 	PhaseBeam
