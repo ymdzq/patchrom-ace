@@ -13,7 +13,7 @@ local-previous-target-dir := ~/workspace/ota_base/saga
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SettingsProvider HTCAlbum HTCCamera
+local-modified-apps := SettingsProvider HTCAlbum HTCCamera MediaProvider
 
 local-modified-jars := HTCExtension framework2
 
