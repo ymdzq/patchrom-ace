@@ -216,5 +216,4 @@
     <MPDP opname="Mobilkom" mccmnc="23201" pdps2g="2" pdps3g="2" />
     <MPDP opname="Iusacell" mccmnc="334050" pdps2g="2" pdps3g="3" />
     <MPDP opname="Maxis" mccmnc="50212" pdps2g="2" pdps3g="2" />
-    <MPDP opname="GR COSMOTE" mccmnc="20201" pdps2g="2" pdps3g="2" />
 </MPDPS>

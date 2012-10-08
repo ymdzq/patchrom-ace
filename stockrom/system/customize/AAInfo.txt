@@ -1,6 +1,6 @@
-TaskID : 266765
-Project : SAGA_ICS_35_S
-SKU : HTCCN CHS[1400]
-ROM Ver : 3.07.1400.2
-Customization Id : 391691
-RCMS Id : 228
+TaskID : 276226
+Project : Bliss_ICS_35_S
+SKU : HTC Europe[401]
+ROM Ver : 2.14.401.2
+Customization Id : 408854
+RCMS Id : 114

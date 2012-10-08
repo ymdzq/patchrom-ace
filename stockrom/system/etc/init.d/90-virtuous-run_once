@@ -1,0 +1,24 @@
+#!/system/bin/sh
+# ===========================================================================
+#  Virtuous ROM Tools (rmk)
+#
+#  $LastChangedDate: 2012-06-02 15:32:58 +0200 (Sat, 02 Jun 2012) $
+# ===========================================================================
+
+. /system/virtuous/scripts/virtuous-functions.sh
+
+if $TEST -f $VIRTUOUS_INSTALLED ; then
+  exit 0
+fi
+
+$LOG -p i "Executing run once script"
+
+# ===========================================================================
+#  Run once, only after a fresh install.
+# ===========================================================================
+
+# Empty for now.
+
+# ===========================================================================
+
+$TOUCH $VIRTUOUS_INSTALLED

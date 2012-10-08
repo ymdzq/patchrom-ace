@@ -13,8 +13,6 @@
 
 
 # static fields
-.field static final ACORE_PROCESS_NAME:Ljava/lang/String; = "android.process.acore"
-
 .field static final TAG:Ljava/lang/String; = "Encryption3LMService"
 
 
@@ -25,6 +23,8 @@
 
 .field private mKeyStore:Landroid/security/KeyStore;
 
+.field private mWrongSettings:Z
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -32,34 +32,34 @@
     .parameter "context"
 
     .prologue
-    .line 57
+    .line 62
     invoke-direct {p0}, Landroid/os/IEncryption3LM$Stub;-><init>()V
 
-    .line 58
+    .line 63
     iput-object p1, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
 
-    .line 59
+    .line 64
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/Encryption3LMService;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 60
+    .line 65
     invoke-static {}, Lcom/android/server/pm/Installer;->getInstance()Lcom/android/server/pm/Installer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/Encryption3LMService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 61
+    .line 66
     invoke-direct {p0}, Lcom/android/server/Encryption3LMService;->encryptedAppsDetected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
+    .line 67
     new-instance v0, Lcom/android/server/Encryption3LMService$BootCompletedReceiver;
 
     const/4 v1, 0x0
@@ -74,9 +74,20 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 65
+    .line 70
     :cond_0
     return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/server/Encryption3LMService;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 29
+    iget-boolean v0, p0, Lcom/android/server/Encryption3LMService;->mWrongSettings:Z
+
+    return v0
 .end method
 
 .method private encryptedAppsDetected()Z
@@ -87,7 +98,7 @@
 
     const/4 v4, 0x0
 
-    .line 73
+    .line 78
     iget-object v6, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -102,12 +113,12 @@
 
     if-nez v6, :cond_1
 
-    .line 92
+    .line 98
     :cond_0
     :goto_0
     return v4
 
-    .line 78
+    .line 83
     :cond_1
     iget-object v6, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
 
@@ -115,7 +126,7 @@
 
     move-result-object v3
 
-    .line 79
+    .line 84
     .local v3, pm:Landroid/content/pm/PackageManager;
     const/16 v6, 0x2000
 
@@ -123,7 +134,7 @@
 
     move-result-object v1
 
-    .line 81
+    .line 86
     .local v1, packages:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -143,7 +154,7 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 82
+    .line 87
     .local v2, pi:Landroid/content/pm/PackageInfo;
     iget-object v6, p0, Lcom/android/server/Encryption3LMService;->mKeyStore:Landroid/security/KeyStore;
 
@@ -157,10 +168,10 @@
 
     move v4, v5
 
-    .line 83
+    .line 88
     goto :goto_0
 
-    .line 87
+    .line 92
     .end local v2           #pi:Landroid/content/pm/PackageInfo;
     :cond_3
     invoke-direct {p0}, Lcom/android/server/Encryption3LMService;->internalStorageEncrypted()Z
@@ -169,16 +180,19 @@
 
     if-nez v6, :cond_0
 
-    .line 88
+    .line 93
     const-string v4, "Encryption3LMService"
 
     const-string v6, "[encryptedAppsDetected] wrong DATA_ENCRYPTION settings"
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 94
+    iput-boolean v5, p0, Lcom/android/server/Encryption3LMService;->mWrongSettings:Z
+
     move v4, v5
 
-    .line 89
+    .line 95
     goto :goto_0
 .end method
 
@@ -188,23 +202,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 153
+    .line 127
     const-string v2, "ro.crypto.state"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 154
+    .line 128
     .local v0, strState:Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 160
+    .line 134
     :cond_0
     :goto_0
     return v1
 
-    .line 157
+    .line 131
     :cond_1
     const-string v2, "encrypted"
 
@@ -214,82 +228,8 @@
 
     if-nez v2, :cond_0
 
-    .line 158
+    .line 132
     const/4 v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method private isProcessRunning(Ljava/lang/String;I)Z
-    .locals 7
-    .parameter "appName"
-    .parameter "pid"
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 166
-    iget-object v5, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
-
-    const-string v6, "activity"
-
-    invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager;
-
-    .line 167
-    .local v0, am:Landroid/app/ActivityManager;
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
-
-    move-result-object v3
-
-    .line 168
-    .local v3, runningApp:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
-    if-nez v3, :cond_1
-
-    .line 174
-    :cond_0
-    :goto_0
-    return v4
-
-    .line 169
-    :cond_1
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    .local v1, i$:Ljava/util/Iterator;
-    :cond_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/app/ActivityManager$RunningAppProcessInfo;
-
-    .line 170
-    .local v2, info:Landroid/app/ActivityManager$RunningAppProcessInfo;
-    iget-object v5, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
-
-    invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget v5, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
-
-    if-ne v5, p2, :cond_2
-
-    .line 171
-    const/4 v4, 0x1
 
     goto :goto_0
 .end method
@@ -297,176 +237,62 @@
 
 # virtual methods
 .method public convertToPlaintext(Ljava/lang/String;I)Z
-    .locals 10
+    .locals 3
     .parameter "packageName"
     .parameter "uid"
 
     .prologue
-    const/4 v9, -0x1
+    .line 109
+    iget-object v1, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
 
-    .line 103
-    iget-object v7, p0, Lcom/android/server/Encryption3LMService;->mContext:Landroid/content/Context;
+    const-string v2, "activity"
 
-    const-string v8, "activity"
-
-    invoke-virtual {v7, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 105
-    .local v0, am:Landroid/app/ActivityManager;
-    const/4 v4, -0x1
-
-    .line 106
-    .local v4, pidAcore:I
-    const/4 v6, -0x1
-
-    .line 107
-    .local v6, uidAcore:I
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
-
-    move-result-object v5
-
-    .line 108
-    .local v5, runningApp:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
-    if-eqz v5, :cond_1
-
-    .line 109
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .local v2, i$:Ljava/util/Iterator;
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
-
     .line 110
-    .local v3, info:Landroid/app/ActivityManager$RunningAppProcessInfo;
-    iget-object v7, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
-
-    const-string v8, "android.process.acore"
-
-    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    .line 111
-    iget v4, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
-
-    .line 112
-    iget v6, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
-
-    .line 118
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #info:Landroid/app/ActivityManager$RunningAppProcessInfo;
-    :cond_1
+    .local v0, am:Landroid/app/ActivityManager;
     invoke-virtual {v0, p1}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 122
-    const-wide/16 v7, 0x3e8
+    .line 113
+    const-wide/16 v1, 0x3e8
 
     :try_start_0
-    invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
+    .line 116
     :goto_0
-    if-eq v9, v4, :cond_2
+    iget-object v1, p0, Lcom/android/server/Encryption3LMService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    if-eq v9, v6, :cond_2
+    invoke-virtual {v1, p1}, Lcom/android/server/pm/Installer;->decrypt(Ljava/lang/String;)I
 
-    if-ne p2, v6, :cond_2
+    .line 117
+    iget-object v1, p0, Lcom/android/server/Encryption3LMService;->mInstaller:Lcom/android/server/pm/Installer;
 
-    .line 128
-    invoke-static {v4}, Landroid/os/Process;->killProcess(I)V
+    invoke-virtual {v1, p1, p2, p2}, Lcom/android/server/pm/Installer;->unEncryptData(Ljava/lang/String;II)I
 
-    .line 129
-    const/4 v1, 0x0
+    move-result v1
 
-    .local v1, i:I
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
     :goto_1
-    const/16 v7, 0x64
+    return v1
 
-    if-ge v1, v7, :cond_2
-
-    .line 130
-    const-string v7, "android.process.acore"
-
-    invoke-direct {p0, v7, v4}, Lcom/android/server/Encryption3LMService;->isProcessRunning(Ljava/lang/String;I)Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    .line 142
-    .end local v1           #i:I
-    :cond_2
-    iget-object v7, p0, Lcom/android/server/Encryption3LMService;->mInstaller:Lcom/android/server/pm/Installer;
-
-    invoke-virtual {v7, p1}, Lcom/android/server/pm/Installer;->decrypt(Ljava/lang/String;)I
-
-    .line 143
-    iget-object v7, p0, Lcom/android/server/Encryption3LMService;->mInstaller:Lcom/android/server/pm/Installer;
-
-    invoke-virtual {v7, p1, p2, p2}, Lcom/android/server/pm/Installer;->unEncryptData(Ljava/lang/String;II)I
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    const/4 v7, 0x1
-
-    :goto_2
-    return v7
-
-    .line 134
-    .restart local v1       #i:I
-    :cond_3
-    const-wide/16 v7, 0xa
-
-    :try_start_1
-    invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-
-    .line 129
-    :goto_3
-    add-int/lit8 v1, v1, 0x1
+    :cond_0
+    const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 143
-    .end local v1           #i:I
-    :cond_4
-    const/4 v7, 0x0
-
-    goto :goto_2
-
-    .line 123
+    .line 114
     :catch_0
-    move-exception v7
+    move-exception v1
 
     goto :goto_0
-
-    .line 135
-    .restart local v1       #i:I
-    :catch_1
-    move-exception v7
-
-    goto :goto_3
 .end method

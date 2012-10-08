@@ -1,0 +1,19 @@
+#!/system/bin/sh
+#PVTeam Tweaks
+#Tweaks & Optimizations
+
+# EXT4
+
+mount -o remount,noauto_da_alloc /data /data
+mount -o remount,noauto_da_alloc /cache /cache
+
+	echo "EXT4 tune up complete - /data & /cache ";
+
+#SD Patch
+
+if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]
+	then
+	/system/xbin/echo "3072" > /sys/devices/virtual/bdi/179:0/read_ahead_kb;
+fi;
+
+	echo "SDCard tune up complete";

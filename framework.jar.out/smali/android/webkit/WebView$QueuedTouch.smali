@@ -29,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 8992
+    .line 8955
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
     .parameter "x0"
 
     .prologue
-    .line 8992
+    .line 8955
     invoke-direct {p0}, Landroid/webkit/WebView$QueuedTouch;-><init>()V
 
     return-void
@@ -53,7 +53,7 @@
     .parameter "other"
 
     .prologue
-    .line 9016
+    .line 8979
     iget-wide v1, p1, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
     iget-wide v3, p0, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
@@ -62,20 +62,20 @@
 
     if-gez v1, :cond_0
 
-    .line 9017
+    .line 8980
     iput-object p0, p1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 9027
+    .line 8990
     .end local p1
     :goto_0
     return-object p1
 
-    .line 9021
+    .line 8984
     .restart local p1
     :cond_0
     move-object v0, p0
 
-    .line 9022
+    .line 8985
     .local v0, insertAt:Landroid/webkit/WebView$QueuedTouch;
     :goto_1
     iget-object v1, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
@@ -92,23 +92,23 @@
 
     if-gez v1, :cond_1
 
-    .line 9023
+    .line 8986
     iget-object v0, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_1
 
-    .line 9025
+    .line 8988
     :cond_1
     iget-object v1, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v1, p1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 9026
+    .line 8989
     iput-object p1, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     move-object p1, p0
 
-    .line 9027
+    .line 8990
     goto :goto_0
 .end method
 
@@ -120,23 +120,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 9008
+    .line 8971
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/webkit/WebView$QueuedTouch;->mEvent:Landroid/view/MotionEvent;
 
-    .line 9009
+    .line 8972
     iput-wide p2, p0, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
-    .line 9010
+    .line 8973
     iput-object v1, p0, Landroid/webkit/WebView$QueuedTouch;->mTed:Landroid/webkit/WebViewCore$TouchEventData;
 
-    .line 9011
+    .line 8974
     iput-object v1, p0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 9012
+    .line 8975
     return-object p0
 .end method
 
@@ -147,20 +147,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 9000
+    .line 8963
     iget-wide v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
     iput-wide v0, p0, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
-    .line 9001
+    .line 8964
     iput-object p1, p0, Landroid/webkit/WebView$QueuedTouch;->mTed:Landroid/webkit/WebViewCore$TouchEventData;
 
-    .line 9002
+    .line 8965
     iput-object v2, p0, Landroid/webkit/WebView$QueuedTouch;->mEvent:Landroid/view/MotionEvent;
 
-    .line 9003
+    .line 8966
     iput-object v2, p0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 9004
+    .line 8967
     return-object p0
 .end method

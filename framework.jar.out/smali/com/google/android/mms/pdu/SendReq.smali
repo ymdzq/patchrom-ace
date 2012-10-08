@@ -183,14 +183,12 @@
     .parameter "value"
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x81
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->appendEncodedStringValue(Lcom/google/android/mms/pdu/EncodedStringValue;I)V
 
-    .line 115
     return-void
 .end method
 
@@ -199,14 +197,12 @@
     .parameter "value"
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x82
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->appendEncodedStringValue(Lcom/google/android/mms/pdu/EncodedStringValue;I)V
 
-    .line 144
     return-void
 .end method
 
@@ -214,7 +210,6 @@
     .locals 2
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x81
@@ -230,7 +225,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x82
@@ -246,7 +240,6 @@
     .locals 2
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x84
@@ -262,7 +255,6 @@
     .locals 2
 
     .prologue
-    .line 350
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x86
@@ -278,7 +270,6 @@
     .locals 2
 
     .prologue
-    .line 369
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x88
@@ -294,7 +285,6 @@
     .locals 2
 
     .prologue
-    .line 181
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x8a
@@ -310,7 +300,6 @@
     .locals 2
 
     .prologue
-    .line 332
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x8e
@@ -326,7 +315,6 @@
     .locals 2
 
     .prologue
-    .line 203
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x90
@@ -342,7 +330,6 @@
     .locals 2
 
     .prologue
-    .line 244
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x98
@@ -359,7 +346,6 @@
     .parameter "value"
 
     .prologue
-    .line 265
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x81
@@ -374,7 +360,6 @@
     .parameter "value"
 
     .prologue
-    .line 223
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x82
@@ -389,7 +374,6 @@
     .parameter "value"
 
     .prologue
-    .line 284
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x84
@@ -409,15 +393,12 @@
     .end annotation
 
     .prologue
-    .line 313
-    .line 191
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x86
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setOctet(II)V
 
-    .line 192
     return-void
 .end method
 
@@ -426,14 +407,12 @@
     .parameter "value"
 
     .prologue
-    .line 212
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x88
 
     invoke-virtual {v0, p1, p2, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setLongInteger(JI)V
 
-    .line 213
     return-void
 .end method
 
@@ -442,14 +421,12 @@
     .parameter "value"
 
     .prologue
-    .line 275
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x8a
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setTextString([BI)V
 
-    .line 276
     return-void
 .end method
 
@@ -458,14 +435,12 @@
     .parameter "value"
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x8e
 
     invoke-virtual {v0, p1, p2, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setLongInteger(JI)V
 
-    .line 234
     return-void
 .end method
 
@@ -479,14 +454,12 @@
     .end annotation
 
     .prologue
-    .line 294
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x90
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setOctet(II)V
 
-    .line 295
     return-void
 .end method
 
@@ -495,14 +468,12 @@
     .parameter "value"
 
     .prologue
-    .line 304
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x97
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setEncodedStringValues([Lcom/google/android/mms/pdu/EncodedStringValue;I)V
 
-    .line 305
     return-void
 .end method
 
@@ -511,13 +482,11 @@
     .parameter "value"
 
     .prologue
-    .line 323
     iget-object v0, p0, Lcom/google/android/mms/pdu/SendReq;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
 
     const/16 v1, 0x98
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/mms/pdu/PduHeaders;->setTextString([BI)V
 
-    .line 324
     return-void
 .end method

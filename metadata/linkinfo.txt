@@ -54,6 +54,3 @@ system/bin/watchprops|system/bin/toolbox
 system/bin/wipe|system/bin/toolbox
 system/fonts/DroidSans-Bold.ttf|system/fonts/Roboto-Bold.ttf
 system/fonts/DroidSans.ttf|system/fonts/Roboto-Regular.ttf
-system/etc/firmware/fw_bcm4330_b2.bin|/system/etc/firmware/fw_bcm4329.bin
-system/etc/firmware/fw_bcm4330_apsta_b2.bin|/system/etc/firmware/fw_bcm4329_apsta.bin
-system/etc/firmware/fw_bcm4330_p2p_b2.bin|/system/etc/firmware/fw_bcm4329_p2p.bin

@@ -22,6 +22,15 @@
           <item name="value7">-1</item>
         </set>
       </function>
+      <function name="power_saver_screen_timeout">
+        <set name="plenty">
+          <item name="value1">15000</item>
+          <item name="value2">30000</item>
+          <item name="value3">45000</item>
+          <item name="value4">60000</item>
+          <item name="value5">120000</item>
+        </set>
+      </function>
     </module>
     <module name="defaultTime1224">
       <function>
@@ -50,7 +59,7 @@
     <module name="deviceData">
       <function>
         <set name="single">
-          <item name="device_name">HTC Desire HD A9191</item>
+          <item name="device_name">HTC Desire HD with Beats™ Audio</item>
         </set>
       </function>
     </module>
@@ -66,22 +75,8 @@
     <module name="Crash_Report">
       <function name="setting">
         <set name="single">
-          <item name="turn_off_report" type="boolean">no</item>
+          <item name="turn_off_report" type="boolean">yes</item>
           <item name="turn_off_application_log" type="boolean">yes</item>
-        </set>
-      </function>
-    </module>
-    <module name="OOBE">
-      <function name="Step_Config">
-        <set name="single">
-          <item name="Sync_Data" type="boolean">yes</item>
-          <item name="Social_Network_Setup" type="boolean">yes</item>
-          <item name="Location_Consent" type="boolean">no</item>
-        </set>
-      </function>
-      <function name="Account_Config">
-        <set name="single">
-          <item name="GMail" type="boolean">no</item>
         </set>
       </function>
     </module>
@@ -92,23 +87,4 @@
   <ShutdownConfiguration>
     <ShutdownAnimation image_png="/system/customize/resource/downanimation.zip" image="" fps="15" />
   </ShutdownConfiguration>
-  <category name="SettingsProvider">
-    <module name="res">
-      <function name="values">
-        <set name="single">
-          <item name="def_install_non_market_apps">1</item>
-          <item name="def_2g_on">2</item>
-        </set>
-      </function>
-    </module>
-  </category>
-  <category name="Settings">
-    <module name="properties">
-      <function>
-        <set name="single">
-          <item name="market_name">HTC Desire HD A9191</item>
-        </set>
-      </function>
-    </module>
-  </category>
 </customization_form>

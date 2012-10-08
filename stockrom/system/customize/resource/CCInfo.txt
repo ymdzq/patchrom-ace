@@ -1,5 +1,5 @@
-﻿Project: SAGA_ICS_35_S
-SKU: HTCCN Open ROM
-ROM Build ID: 391691
-Build ID: 391692; SKU: HTCCN Open ROM default; CID: default; MNS: default
-Datetime: 2012/06/15 11:01:55
+﻿Project: BLISS_ICS_35_S
+SKU: HTC Generic ROM for Global
+ROM Build ID: 408854
+Build ID: 408856; SKU: HTC Generic ROM for Global test default; CID: default; MNS: default
+Datetime: 2012/08/06 12:37:07

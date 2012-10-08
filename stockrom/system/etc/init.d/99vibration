@@ -1,0 +1,5 @@
+#!/system/bin/sh
+#VIBRATION_VOLTAGE_CONFIG
+#BY_KILLERSLOTH
+
+echo "2000" > /sys/devices/virtual/timed_output/vibrator/voltage_level

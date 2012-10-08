@@ -2299,10 +2299,12 @@
 
     invoke-static {v1, v3}, Lcom/htc/opensense2/album/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 530
     const-string v1, "com.htc.video"
 
     const-string v3, "com.htc.video.ViewVideo"
 
+    .line 531
     move-object/from16 v0, p4
 
     iget-object v1, v0, Lcom/htc/album/TabPluginDLNA/DLNAMediumInfo;->mUri:Ljava/lang/String;

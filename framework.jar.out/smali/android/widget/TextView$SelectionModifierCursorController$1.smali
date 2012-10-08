@@ -26,7 +26,7 @@
     .parameter "x1"
 
     .prologue
-    .line 12585
+    .line 12609
     iput-object p1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     iget-object v0, p1, Landroid/widget/TextView$SelectionModifierCursorController;->this$0:Landroid/widget/TextView;
@@ -43,12 +43,12 @@
     .parameter "ev"
 
     .prologue
-    .line 12588
+    .line 12612
     invoke-super {p0, p1}, Landroid/widget/TextView$SelectionEndHandleView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 12589
+    .line 12613
     .local v0, b:Z
     if-nez v0, :cond_0
 
@@ -78,7 +78,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 12590
+    .line 12614
     iget-object v1, p0, Landroid/widget/TextView$SelectionModifierCursorController$1;->this$1:Landroid/widget/TextView$SelectionModifierCursorController;
 
     #getter for: Landroid/widget/TextView$SelectionModifierCursorController;->mStartHandle:Landroid/widget/TextView$SelectionStartHandleView;
@@ -88,7 +88,7 @@
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView$SelectionStartHandleView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 12592
+    .line 12616
     :cond_0
     return v0
 .end method

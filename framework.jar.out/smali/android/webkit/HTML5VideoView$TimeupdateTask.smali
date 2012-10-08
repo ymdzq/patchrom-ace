@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x12
+    accessFlags = 0x1a
     name = "TimeupdateTask"
 .end annotation
 
@@ -17,25 +17,20 @@
 # instance fields
 .field private mProxy:Landroid/webkit/HTML5VideoViewProxy;
 
-.field final synthetic this$0:Landroid/webkit/HTML5VideoView;
-
 
 # direct methods
-.method public constructor <init>(Landroid/webkit/HTML5VideoView;Landroid/webkit/HTML5VideoViewProxy;)V
+.method public constructor <init>(Landroid/webkit/HTML5VideoViewProxy;)V
     .locals 0
-    .parameter
     .parameter "proxy"
 
     .prologue
-    .line 283
-    iput-object p1, p0, Landroid/webkit/HTML5VideoView$TimeupdateTask;->this$0:Landroid/webkit/HTML5VideoView;
-
+    .line 249
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 284
-    iput-object p2, p0, Landroid/webkit/HTML5VideoView$TimeupdateTask;->mProxy:Landroid/webkit/HTML5VideoViewProxy;
+    .line 250
+    iput-object p1, p0, Landroid/webkit/HTML5VideoView$TimeupdateTask;->mProxy:Landroid/webkit/HTML5VideoViewProxy;
 
-    .line 285
+    .line 251
     return-void
 .end method
 
@@ -45,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 289
+    .line 255
     iget-object v0, p0, Landroid/webkit/HTML5VideoView$TimeupdateTask;->mProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     invoke-virtual {v0}, Landroid/webkit/HTML5VideoViewProxy;->onTimeupdate()V
 
-    .line 290
+    .line 256
     return-void
 .end method

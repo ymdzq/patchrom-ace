@@ -1,0 +1,35 @@
+#!/system/bin/sh
+
+# ===========================================================================
+#  Virtuous ROM Tools (rmk, chrisch)
+#
+#  $LastChangedDate: 2012-07-19 07:03:59 +0200 (Thu, 19 Jul 2012) $
+# ===========================================================================
+
+. /system/virtuous/scripts/virtuous-functions.sh
+
+OC_APPS="ch.amana.android.cputuner com.mhuang.overclocking org.freecoder.widgets.overclock com.antutu.CpuMasterFree"
+
+$LOG -p i "Executing optimization script"
+
+# Increase readahead buffers on MMC devices
+
+$ECHO "1024" > /sys/block/mmcblk0/bdi/read_ahead_kb
+$ECHO "1024" > /sys/block/mmcblk1/bdi/read_ahead_kb
+
+# Check whether any cpu tuning apps are already installed.
+# If not, we'll start our custom daemon.
+
+OC_KERNEL="/sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies"
+
+if ! $TEST -e $OC_KERNEL ; then
+    $LOG -p i "Kernel does not support overclocking; disabling Virtuous_OC"
+    exit 1
+fi
+
+if is_package_installed $OC_APPS ; then
+    $LOG -p i "User-installed overclocking app detected; disabled Virtuous_OC"
+else
+    $LOG -p i "No overclocking apps detected; enabling Virtuous_OC"
+    /system/xbin/virtuous_oc
+fi

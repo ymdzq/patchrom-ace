@@ -1,0 +1,39 @@
+#!/system/bin/sh
+
+# ===========================================================================
+#  Virtuous ROM Tools (seo, chrisch)
+#
+#  $LastChangedDate: 2012-06-02 15:32:58 +0200 (Sat, 02 Jun 2012) $
+# ===========================================================================
+#
+#  Quick and dirty way to calibrate battery
+#  after fresh rom install
+#
+# ===========================================================================
+
+. /system/virtuous/scripts/virtuous-functions.sh
+
+# ===========================================================================
+#  Run this section until battery is calibrated
+# ===========================================================================
+
+SLEEPTIME=120
+
+if $TEST -f $BATTERY_STATE_FILE ; then
+  exit 0
+fi
+
+(
+while $BUSYBOX true; do
+  LEVEL=$($CAT /sys/class/power_supply/battery/capacity)
+  CUR=$($CAT /sys/class/power_supply/battery/batt_current)
+  if [ "$LEVEL" == "100" ] && [ "$CUR" == "0" ] ; then
+    $LOG -p i "battery calibration successfull"
+    $RM -f /data/system/batterystats.bin
+    $TOUCH $BATTERY_STATE_FILE
+    exit 0
+  fi
+  $LOG -p i "battery calibration LEVEL: $LEVEL CUR: $CUR"
+  $SLEEP $SLEEPTIME
+done
+) &

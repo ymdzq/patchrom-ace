@@ -2883,36 +2883,6 @@
 
     move-object/from16 v0, v31
 
-    const-string v3, "landscape"
-
-    const/4 v4, 0x1
-
-    move-object/from16 v0, v31
-
-    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/camera/HTCCamera$MainHandler;->this$0:Lcom/android/camera/HTCCamera;
-
-    move-object/from16 v0, v31
-
-    invoke-virtual {v3, v0}, Lcom/android/camera/HTCCamera;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_a
-    if-nez v22, :cond_2f
-
-    :try_start_1
-    const-string v3, "com.htc.album"
-
-    const-string v4, "com.htc.album.TabPluginDevice.ViewVideo"
-
-    move-object/from16 v0, v31
-
-    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
     .line 1562
     const-string v3, "landscape"
 
@@ -2923,6 +2893,39 @@
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 1563
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/camera/HTCCamera$MainHandler;->this$0:Lcom/android/camera/HTCCamera;
+
+    move-object/from16 v0, v31
+
+    invoke-virtual {v3, v0}, Lcom/android/camera/HTCCamera;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1571
+    :goto_a
+    if-nez v22, :cond_2f
+
+    .line 1576
+    :try_start_1
+    const-string v3, "com.htc.album"
+
+    const-string v4, "com.htc.album.TabPluginDevice.ViewVideo"
+
+    move-object/from16 v0, v31
+
+    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1577
+    const-string v3, "landscape"
+
+    const/4 v4, 0x1
+
+    move-object/from16 v0, v31
+
+    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     .line 1578
     move-object/from16 v0, p0
 

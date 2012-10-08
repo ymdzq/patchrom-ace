@@ -28,8 +28,8 @@
     <string name="config_tether_apndata" />
     <string name="config_wifi_p2p_device_type">10-0050F204-5</string>
     <string name="default_wallpaper_component">@null</string>
-    <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
-    <string name="config_geocodeProvider">com.google.android.location.GeocodeProvider</string>
+    <string name="config_networkLocationProvider">android.htc.china.NETWORKLOCATION_SERVICE</string>
+    <string name="config_geocodeProvider">android.htc.china.GEOCODER_SERVICE</string>
     <string name="config_datause_iface">rmnet0</string>
     <string name="config_default_dns_server">8.8.8.8</string>
     <string name="gsm_alphabet_default_charset" />
