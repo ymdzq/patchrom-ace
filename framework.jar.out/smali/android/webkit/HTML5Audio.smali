@@ -174,14 +174,14 @@
     .locals 2
 
     .prologue
-    .line 320
+    .line 314
     iget v0, p0, Landroid/webkit/HTML5Audio;->mState:I
 
     sget v1, Landroid/webkit/HTML5Audio;->PREPARED:I
 
     if-lt v0, v1, :cond_0
 
-    .line 321
+    .line 315
     iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
@@ -194,7 +194,7 @@
 
     div-float/2addr v0, v1
 
-    .line 323
+    .line 317
     :goto_0
     return v0
 
@@ -611,53 +611,31 @@
     goto :goto_1
 .end method
 
-.method private setVolume(F)V
-    .locals 2
-    .parameter "volume"
-
-    .prologue
-    .line 303
-    iget v0, p0, Landroid/webkit/HTML5Audio;->mState:I
-
-    sget v1, Landroid/webkit/HTML5Audio;->PREPARED:I
-
-    if-lt v0, v1, :cond_0
-
-    .line 304
-    iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
-
-    .line 306
-    :cond_0
-    return-void
-.end method
-
 .method private teardown()V
     .locals 1
 
     .prologue
-    .line 313
+    .line 307
     iget-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 314
+    .line 308
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/HTML5Audio;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 315
+    .line 309
     sget v0, Landroid/webkit/HTML5Audio;->ERROR:I
 
     iput v0, p0, Landroid/webkit/HTML5Audio;->mState:I
 
-    .line 316
+    .line 310
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/HTML5Audio;->mNativePointer:I
 
-    .line 317
+    .line 311
     return-void
 .end method
 

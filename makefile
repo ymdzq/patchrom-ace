@@ -3,17 +3,13 @@
 
 # The original zip file, MUST be specified by each product
 local-zip-file     := stockrom.zip
-local-out-zip-file := G12_MIUI.zip
-
-#the location for local-ota to save target-file
-local-previous-target-dir := ~/workspace/ota_base/saga
 
 
 # The output zip file of MIUI rom, the default is update.zip if not specified
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SettingsProvider HTCAlbum HTCCamera
+local-modified-apps := HTCCamera SettingsProvider HTCAlbum MediaProvider
 
 local-modified-jars := HTCExtension framework2
 

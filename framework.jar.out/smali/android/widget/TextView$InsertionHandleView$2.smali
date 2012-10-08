@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 12161
+    .line 12185
     iput-object p1, p0, Landroid/widget/TextView$InsertionHandleView$2;->this$1:Landroid/widget/TextView$InsertionHandleView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 12163
+    .line 12187
     iget-object v0, p0, Landroid/widget/TextView$InsertionHandleView$2;->this$1:Landroid/widget/TextView$InsertionHandleView;
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionHandleView;->hide()V
 
-    .line 12164
+    .line 12188
     return-void
 .end method

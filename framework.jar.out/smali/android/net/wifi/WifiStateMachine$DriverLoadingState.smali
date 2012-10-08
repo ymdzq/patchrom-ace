@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4591
+    .line 4584
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +38,7 @@
     .locals 3
 
     .prologue
-    .line 4595
+    .line 4588
     const v1, 0xc365
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->getName()Ljava/lang/String;
@@ -47,12 +47,12 @@
 
     invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 4597
+    .line 4590
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 4598
+    .line 4591
     .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->copyFrom(Landroid/os/Message;)V
 
-    .line 4602
+    .line 4595
     new-instance v1, Ljava/lang/Thread;
 
     new-instance v2, Landroid/net/wifi/WifiStateMachine$DriverLoadingState$1;
@@ -74,7 +74,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 4671
+    .line 4664
     return-void
 .end method
 
@@ -83,19 +83,19 @@
     .parameter "message"
 
     .prologue
-    .line 4676
+    .line 4669
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 4702
+    .line 4695
     const/4 v0, 0x0
 
-    .line 4705
+    .line 4698
     :goto_0
     return v0
 
-    .line 4678
+    .line 4671
     :sswitch_0
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -109,7 +109,7 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$2700(Landroid/net/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 4704
+    .line 4697
     :goto_1
     const v0, 0xc366
 
@@ -117,12 +117,12 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 4705
+    .line 4698
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 4681
+    .line 4674
     :sswitch_1
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -138,7 +138,7 @@
 
     goto :goto_1
 
-    .line 4699
+    .line 4692
     :sswitch_2
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$DriverLoadingState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -147,7 +147,7 @@
 
     goto :goto_1
 
-    .line 4676
+    .line 4669
     :sswitch_data_0
     .sparse-switch
         0x20001 -> :sswitch_2

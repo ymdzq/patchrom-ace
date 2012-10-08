@@ -1308,7 +1308,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070043
+    const v1, 0x1070041
 
     const/4 v2, -0x1
 
@@ -1374,7 +1374,7 @@
 
     move-result-object v0
 
-    const v1, 0x107003f
+    const v1, 0x107003d
 
     new-instance v2, Landroid/webkit/EditableWebView$EditableQuickActions$4;
 
@@ -1434,7 +1434,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070041
+    const v1, 0x107003f
 
     iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
@@ -1508,7 +1508,7 @@
 
     move-result-object v0
 
-    const v1, 0x1070040
+    const v1, 0x107003e
 
     iget-object v2, p0, Landroid/webkit/EditableWebView$EditableQuickActions;->this$0:Landroid/webkit/EditableWebView;
 
@@ -1648,7 +1648,7 @@
 
     move-result-object v1
 
-    const v2, 0x1070042
+    const v2, 0x1070040
 
     new-instance v4, Landroid/webkit/EditableWebView$EditableQuickActions$10;
 

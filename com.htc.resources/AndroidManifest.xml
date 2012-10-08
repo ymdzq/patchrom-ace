@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="102368428" android:versionName="1.2.2214403227.368428" package="com.htc" coreApp="true"
+<manifest android:versionCode="102368428" android:versionName="1.2.2214403228.368428" package="com.htc" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
     <permission android:label="@string/permlab_blockkey" android:name="com.htc.Manifest.permission.BLOCK_KEYBOARD_EVENT" android:protectionLevel="signature" android:description="@string/permdesc_blockkey" />

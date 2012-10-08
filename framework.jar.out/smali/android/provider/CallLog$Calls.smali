@@ -618,11 +618,9 @@
 
     move-result-object v16
 
-    .line 472
     .local v16, result:Landroid/net/Uri;
-    invoke-static/range {p1 .. p1}, Landroid/provider/CallLog$Calls;->removeExpiredEntries(Landroid/content/Context;)V
+    #invoke-static/range {p1 .. p1}, Landroid/provider/CallLog$Calls;->removeExpiredEntries(Landroid/content/Context;)V
 
-    .line 475
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1

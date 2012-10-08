@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 13456
+    .line 13480
     iput-object p1, p0, Landroid/widget/TextView$HtcPastePositionListener;->this$0:Landroid/widget/TextView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 13456
+    .line 13480
     invoke-direct {p0, p1}, Landroid/widget/TextView$HtcPastePositionListener;-><init>(Landroid/widget/TextView;)V
 
     return-void
@@ -57,7 +57,7 @@
     .parameter "parentScrolled"
 
     .prologue
-    .line 13460
+    .line 13484
     iget-object v0, p0, Landroid/widget/TextView$HtcPastePositionListener;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->useHtcTextSelection()Z
@@ -88,13 +88,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 13461
+    .line 13485
     iget-object v0, p0, Landroid/widget/TextView$HtcPastePositionListener;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->showQuickAction()V
     invoke-static {v0}, Landroid/widget/TextView;->access$3100(Landroid/widget/TextView;)V
 
-    .line 13463
+    .line 13487
     :cond_0
     return-void
 .end method

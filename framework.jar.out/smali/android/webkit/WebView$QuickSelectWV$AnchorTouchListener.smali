@@ -45,29 +45,29 @@
     .parameter
 
     .prologue
-    .line 13795
+    .line 13728
     iput-object p1, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13796
+    .line 13729
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
 
-    .line 13799
+    .line 13732
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
-    .line 13800
+    .line 13733
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
-    .line 13803
+    .line 13736
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mUpdateTime:J
@@ -75,12 +75,12 @@
     return-void
 .end method
 
-.method static synthetic access$16400(Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;)Z
+.method static synthetic access$16500(Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;)Z
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 13795
+    .line 13728
     iget-boolean v0, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
     return v0
@@ -93,12 +93,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 13806
+    .line 13739
     instance-of v2, p1, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_0
 
-    .line 13807
+    .line 13740
     check-cast p1, Landroid/view/ViewGroup;
 
     .end local p1
@@ -108,17 +108,17 @@
 
     move-result-object v0
 
-    .line 13809
+    .line 13742
     .local v0, child:Landroid/view/View;
     if-nez v0, :cond_1
 
-    .line 13818
+    .line 13751
     .end local v0           #child:Landroid/view/View;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 13810
+    .line 13743
     .restart local v0       #child:Landroid/view/View;
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -129,14 +129,14 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 13811
+    .line 13744
     iget-object v1, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v1, v1, Landroid/webkit/WebView$QuickSelectAbs;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     goto :goto_0
 
-    .line 13812
+    .line 13745
     :cond_2
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -146,7 +146,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 13813
+    .line 13746
     iget-object v1, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v1, v1, Landroid/webkit/WebView$QuickSelectAbs;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
@@ -162,31 +162,31 @@
     .parameter "event"
 
     .prologue
-    .line 13823
+    .line 13756
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     if-nez v8, :cond_1
 
-    .line 13824
+    .line 13757
     invoke-direct {p0, p1}, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->getTouchAnchor(Landroid/view/View;)Lcom/htc/textselection/SelectionAnchor;
 
     move-result-object v8
 
     iput-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
-    .line 13825
+    .line 13758
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     if-nez v8, :cond_0
 
-    .line 13826
+    .line 13759
     const/4 v8, 0x0
 
-    .line 14060
+    .line 13993
     :goto_0
     return v8
 
-    .line 13828
+    .line 13761
     :cond_0
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
@@ -201,7 +201,7 @@
     :goto_1
     iput-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
-    .line 13839
+    .line 13772
     :cond_1
     const/4 v8, 0x2
 
@@ -209,7 +209,7 @@
 
     fill-array-data v5, :array_0
 
-    .line 13840
+    .line 13773
     .local v5, onScreenOffset:[I
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -217,7 +217,7 @@
 
     invoke-virtual {v8, v5}, Landroid/webkit/WebView;->getLocationOnScreen([I)V
 
-    .line 13841
+    .line 13774
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
@@ -232,7 +232,7 @@
 
     move-result-object v6
 
-    .line 13843
+    .line 13776
     .local v6, p:Landroid/graphics/PointF;
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -245,7 +245,7 @@
     iget-object v10, v10, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mScrollX:I
-    invoke-static {v10}, Landroid/webkit/WebView;->access$16700(Landroid/webkit/WebView;)I
+    invoke-static {v10}, Landroid/webkit/WebView;->access$16800(Landroid/webkit/WebView;)I
 
     move-result v10
 
@@ -271,7 +271,7 @@
 
     move-result v0
 
-    .line 13844
+    .line 13777
     .local v0, contentX:I
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -284,7 +284,7 @@
     iget-object v10, v10, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mScrollY:I
-    invoke-static {v10}, Landroid/webkit/WebView;->access$16800(Landroid/webkit/WebView;)I
+    invoke-static {v10}, Landroid/webkit/WebView;->access$16900(Landroid/webkit/WebView;)I
 
     move-result v10
 
@@ -310,7 +310,7 @@
 
     move-result v1
 
-    .line 13846
+    .line 13779
     .local v1, contentY:I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -318,13 +318,13 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 14060
+    .line 13993
     :goto_2
     const/4 v8, 0x1
 
     goto :goto_0
 
-    .line 13828
+    .line 13761
     .end local v0           #contentX:I
     .end local v1           #contentY:I
     .end local v5           #onScreenOffset:[I
@@ -334,7 +334,7 @@
 
     goto :goto_1
 
-    .line 13848
+    .line 13781
     .restart local v0       #contentX:I
     .restart local v1       #contentY:I
     .restart local v5       #onScreenOffset:[I
@@ -352,7 +352,7 @@
 
     if-eq v8, v9, :cond_3
 
-    .line 13849
+    .line 13782
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mQSMethod:Landroid/webkit/WebViewSelectionMethod;
@@ -361,27 +361,27 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 13851
+    .line 13784
     :cond_3
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mConfirmMove:Z
 
-    .line 13852
+    .line 13785
     iget v8, v6, Landroid/graphics/PointF;->x:F
 
     float-to-int v8, v8
 
     iput v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mDownX:I
 
-    .line 13853
+    .line 13786
     iget v8, v6, Landroid/graphics/PointF;->y:F
 
     float-to-int v8, v8
 
     iput v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mDownY:I
 
-    .line 13855
+    .line 13788
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -394,7 +394,7 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebView$AutoScrollerWrapper;->findScrollableView(Landroid/webkit/WebView;)V
 
-    .line 13858
+    .line 13791
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->tmpRect:Landroid/graphics/Rect;
@@ -410,7 +410,7 @@
     :goto_3
     invoke-virtual {v9, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13859
+    .line 13792
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -425,7 +425,7 @@
 
     iput v9, v8, Landroid/graphics/Point;->x:I
 
-    .line 13860
+    .line 13793
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -440,14 +440,14 @@
 
     iput v9, v8, Landroid/graphics/Point;->y:I
 
-    .line 13863
+    .line 13796
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     const/4 v9, 0x1
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebView$QuickSelectWV;->hideQuickActions(Z)V
 
-    .line 13866
+    .line 13799
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifierAnchor:Landroid/graphics/Rect;
@@ -463,179 +463,21 @@
     :goto_4
     invoke-virtual {v9, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13867
+    .line 13800
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     const/4 v9, 0x1
 
     iput-boolean v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
 
-    .line 13868
+    .line 13801
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v8}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 13869
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v9, v9, Landroid/webkit/WebView$QuickSelectAbs;->magnifierAnchor:Landroid/graphics/Rect;
-
-    iget v10, v6, Landroid/graphics/PointF;->x:F
-
-    iget-object v11, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v11, v11, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
-
-    #getter for: Landroid/webkit/WebView;->mScrollX:I
-    invoke-static {v11}, Landroid/webkit/WebView;->access$16900(Landroid/webkit/WebView;)I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    add-float/2addr v10, v11
-
-    const/4 v11, 0x0
-
-    aget v11, v5, v11
-
-    int-to-float v11, v11
-
-    sub-float/2addr v10, v11
-
-    const/high16 v11, 0x3f00
-
-    add-float/2addr v10, v11
-
-    float-to-int v10, v10
-
-    iget-object v11, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v11, v11, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
-
-    iget-object v12, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
-
-    iget v12, v12, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {v11, v12}, Landroid/webkit/WebView;->contentToViewDimension(I)I
-
-    move-result v11
-
-    invoke-virtual {v8, v9, v10, v11}, Landroid/webkit/WebView$QuickSelectWV;->showMagnify(Landroid/graphics/Rect;II)V
-
-    goto/16 :goto_2
-
-    .line 13858
-    :cond_4
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
-
-    goto :goto_3
-
-    .line 13866
-    :cond_5
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
-
-    goto :goto_4
-
-    .line 13876
-    :pswitch_1
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
-
-    iget v8, v8, Landroid/graphics/Point;->x:I
-
-    add-int/2addr v0, v8
-
-    .line 13877
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
-
-    iget v8, v8, Landroid/graphics/Point;->y:I
-
-    add-int/2addr v1, v8
-
-    .line 13880
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
-
-    iget-object v8, v8, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
-
-    move-result v9
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
-
-    move-result v10
-
-    invoke-virtual {v8, v9, v10}, Landroid/webkit/WebView$AutoScrollerWrapper;->doAutoSCroll(FF)Z
-
-    move-result v3
-
-    .line 13883
-    .local v3, isScrolling:Z
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result v8
-
-    if-nez v8, :cond_6
-
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
-
-    invoke-virtual {v8, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_9
-
-    .line 13886
-    :cond_6
-    if-eqz v3, :cond_7
-
-    .line 13887
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifier:Landroid/webkit/MagnifyView;
-
-    invoke-virtual {v8}, Landroid/webkit/MagnifyView;->dismiss()V
-
-    .line 13895
-    :goto_5
-    const/4 v8, 0x1
-
-    goto/16 :goto_0
-
-    .line 13890
-    :cond_7
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifierAnchor:Landroid/graphics/Rect;
-
-    iget-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
-
-    if-eqz v8, :cond_8
-
-    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
-
-    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
-
-    :goto_6
-    invoke-virtual {v9, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    .line 13891
+    .line 13802
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -685,9 +527,167 @@
 
     invoke-virtual {v8, v9, v10, v11}, Landroid/webkit/WebView$QuickSelectWV;->showMagnify(Landroid/graphics/Rect;II)V
 
+    goto/16 :goto_2
+
+    .line 13791
+    :cond_4
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
+
+    goto :goto_3
+
+    .line 13799
+    :cond_5
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
+
+    goto :goto_4
+
+    .line 13809
+    :pswitch_1
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
+
+    iget v8, v8, Landroid/graphics/Point;->x:I
+
+    add-int/2addr v0, v8
+
+    .line 13810
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
+
+    iget v8, v8, Landroid/graphics/Point;->y:I
+
+    add-int/2addr v1, v8
+
+    .line 13813
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
+
+    iget-object v8, v8, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v9
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result v10
+
+    invoke-virtual {v8, v9, v10}, Landroid/webkit/WebView$AutoScrollerWrapper;->doAutoSCroll(FF)Z
+
+    move-result v3
+
+    .line 13816
+    .local v3, isScrolling:Z
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v8
+
+    if-nez v8, :cond_6
+
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
+
+    invoke-virtual {v8, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    .line 13819
+    :cond_6
+    if-eqz v3, :cond_7
+
+    .line 13820
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifier:Landroid/webkit/MagnifyView;
+
+    invoke-virtual {v8}, Landroid/webkit/MagnifyView;->dismiss()V
+
+    .line 13828
+    :goto_5
+    const/4 v8, 0x1
+
+    goto/16 :goto_0
+
+    .line 13823
+    :cond_7
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifierAnchor:Landroid/graphics/Rect;
+
+    iget-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
+
+    if-eqz v8, :cond_8
+
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
+
+    :goto_6
+    invoke-virtual {v9, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    .line 13824
+    iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v9, v9, Landroid/webkit/WebView$QuickSelectAbs;->magnifierAnchor:Landroid/graphics/Rect;
+
+    iget v10, v6, Landroid/graphics/PointF;->x:F
+
+    iget-object v11, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v11, v11, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
+
+    #getter for: Landroid/webkit/WebView;->mScrollX:I
+    invoke-static {v11}, Landroid/webkit/WebView;->access$17100(Landroid/webkit/WebView;)I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    add-float/2addr v10, v11
+
+    const/4 v11, 0x0
+
+    aget v11, v5, v11
+
+    int-to-float v11, v11
+
+    sub-float/2addr v10, v11
+
+    const/high16 v11, 0x3f00
+
+    add-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    iget-object v11, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
+
+    iget-object v11, v11, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
+
+    iget-object v12, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->touchOffset:Landroid/graphics/Point;
+
+    iget v12, v12, Landroid/graphics/Point;->y:I
+
+    invoke-virtual {v11, v12}, Landroid/webkit/WebView;->contentToViewDimension(I)I
+
+    move-result v11
+
+    invoke-virtual {v8, v9, v10, v11}, Landroid/webkit/WebView$QuickSelectWV;->showMagnify(Landroid/graphics/Rect;II)V
+
     goto :goto_5
 
-    .line 13890
+    .line 13823
     :cond_8
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -695,11 +695,11 @@
 
     goto :goto_6
 
-    .line 13905
+    .line 13838
     :cond_9
     const/4 v4, 0x0
 
-    .line 13907
+    .line 13840
     .local v4, movingRect:Landroid/graphics/Rect;
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -711,7 +711,7 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13908
+    .line 13841
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->oSelEnd:Landroid/graphics/Rect;
@@ -722,12 +722,12 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13909
+    .line 13842
     iget-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
     if-eqz v8, :cond_e
 
-    .line 13910
+    .line 13843
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->tmpRect:Landroid/graphics/Rect;
@@ -738,7 +738,7 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13911
+    .line 13844
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -759,7 +759,7 @@
 
     invoke-virtual {v8, v0, v1, v9, v10}, Landroid/webkit/WebView$QuickSelectWV;->makeSelect(IIII)Z
 
-    .line 13913
+    .line 13846
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -769,9 +769,9 @@
     iget-object v9, v9, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
 
     #calls: Landroid/webkit/WebView;->nativeGetSelectionStart(Landroid/graphics/Rect;)V
-    invoke-static {v8, v9}, Landroid/webkit/WebView;->access$15300(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
+    invoke-static {v8, v9}, Landroid/webkit/WebView;->access$15400(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
 
-    .line 13915
+    .line 13848
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -782,12 +782,12 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebView;->nativeGetSelectionEnd(Landroid/graphics/Rect;)V
 
-    .line 13916
+    .line 13849
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v4, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
 
-    .line 13919
+    .line 13852
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->tmpRect:Landroid/graphics/Rect;
@@ -802,7 +802,7 @@
 
     if-nez v8, :cond_a
 
-    .line 13920
+    .line 13853
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -816,19 +816,19 @@
     :goto_7
     iput-boolean v8, v9, Landroid/webkit/WebView$QuickSelectAbs;->acrossFlag:Z
 
-    .line 13922
+    .line 13855
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
-    .line 13923
+    .line 13856
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
 
     iput-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mTouchingAnchor:Lcom/htc/textselection/SelectionAnchor;
 
-    .line 13951
+    .line 13884
     :cond_a
     :goto_8
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -859,7 +859,7 @@
 
     if-nez v8, :cond_c
 
-    .line 13953
+    .line 13886
     :cond_b
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -867,24 +867,24 @@
 
     iput-wide v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mUpdateTime:J
 
-    .line 13979
+    .line 13912
     :cond_c
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     #calls: Landroid/webkit/WebView$QuickSelectWV;->getUIdataFromWebcore()V
-    invoke-static {v8}, Landroid/webkit/WebView$QuickSelectWV;->access$17100(Landroid/webkit/WebView$QuickSelectWV;)V
+    invoke-static {v8}, Landroid/webkit/WebView$QuickSelectWV;->access$17200(Landroid/webkit/WebView$QuickSelectWV;)V
 
-    .line 13981
+    .line 13914
     if-eqz v3, :cond_10
 
-    .line 13982
+    .line 13915
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifier:Landroid/webkit/MagnifyView;
 
     invoke-virtual {v8}, Landroid/webkit/MagnifyView;->dismiss()V
 
-    .line 13990
+    .line 13923
     :goto_9
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -894,13 +894,13 @@
 
     goto/16 :goto_2
 
-    .line 13920
+    .line 13853
     :cond_d
     const/4 v8, 0x0
 
     goto :goto_7
 
-    .line 13930
+    .line 13863
     :cond_e
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -912,7 +912,7 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13931
+    .line 13864
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -933,7 +933,7 @@
 
     invoke-virtual {v8, v9, v10, v0, v1}, Landroid/webkit/WebView$QuickSelectWV;->makeSelect(IIII)Z
 
-    .line 13932
+    .line 13865
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -944,7 +944,7 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebView;->nativeGetSelectionEnd(Landroid/graphics/Rect;)V
 
-    .line 13934
+    .line 13867
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -954,14 +954,14 @@
     iget-object v9, v9, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
 
     #calls: Landroid/webkit/WebView;->nativeGetSelectionStart(Landroid/graphics/Rect;)V
-    invoke-static {v8, v9}, Landroid/webkit/WebView;->access$15300(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
+    invoke-static {v8, v9}, Landroid/webkit/WebView;->access$15400(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
 
-    .line 13935
+    .line 13868
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v4, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
 
-    .line 13938
+    .line 13871
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->tmpRect:Landroid/graphics/Rect;
@@ -976,7 +976,7 @@
 
     if-nez v8, :cond_a
 
-    .line 13939
+    .line 13872
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -990,12 +990,12 @@
     :goto_a
     iput-boolean v8, v9, Landroid/webkit/WebView$QuickSelectAbs;->acrossFlag:Z
 
-    .line 13941
+    .line 13874
     const/4 v8, 0x1
 
     iput-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
-    .line 13942
+    .line 13875
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mPriorAnchor:Lcom/htc/textselection/SelectionAnchor;
@@ -1004,13 +1004,13 @@
 
     goto/16 :goto_8
 
-    .line 13939
+    .line 13872
     :cond_f
     const/4 v8, 0x0
 
     goto :goto_a
 
-    .line 13985
+    .line 13918
     :cond_10
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1027,7 +1027,7 @@
     :goto_b
     invoke-virtual {v9, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 13986
+    .line 13919
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -1041,7 +1041,7 @@
     iget-object v11, v11, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mScrollX:I
-    invoke-static {v11}, Landroid/webkit/WebView;->access$17200(Landroid/webkit/WebView;)I
+    invoke-static {v11}, Landroid/webkit/WebView;->access$17300(Landroid/webkit/WebView;)I
 
     move-result v11
 
@@ -1079,7 +1079,7 @@
 
     goto/16 :goto_9
 
-    .line 13985
+    .line 13918
     :cond_11
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1087,7 +1087,7 @@
 
     goto :goto_b
 
-    .line 13997
+    .line 13930
     .end local v3           #isScrolling:Z
     .end local v4           #movingRect:Landroid/graphics/Rect;
     :pswitch_2
@@ -1099,42 +1099,42 @@
 
     invoke-virtual {v8}, Landroid/webkit/WebView$AutoScrollerWrapper;->stopScroll()V
 
-    .line 14000
+    .line 13933
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     const/4 v9, 0x0
 
     iput-boolean v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
 
-    .line 14001
+    .line 13934
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->magnifier:Landroid/webkit/MagnifyView;
 
     invoke-virtual {v8}, Landroid/webkit/MagnifyView;->dismiss()V
 
-    .line 14003
+    .line 13936
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     const/4 v9, 0x0
 
     iput-boolean v9, v8, Landroid/webkit/WebView$QuickSelectAbs;->acrossFlag:Z
 
-    .line 14004
+    .line 13937
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v8}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 14007
+    .line 13940
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-boolean v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->ENABLE_MSG:Z
 
     if-eqz v8, :cond_13
 
-    .line 14008
+    .line 13941
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -1161,7 +1161,7 @@
 
     invoke-virtual {v9, v10, v8, v11}, Landroid/webkit/WebViewCore;->sendMessage(IILjava/lang/Object;)V
 
-    .line 14056
+    .line 13989
     :goto_d
     const/4 v8, 0x0
 
@@ -1169,13 +1169,13 @@
 
     goto/16 :goto_2
 
-    .line 14008
+    .line 13941
     :cond_12
     const/4 v8, 0x0
 
     goto :goto_c
 
-    .line 14012
+    .line 13945
     :cond_13
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1183,7 +1183,7 @@
 
     invoke-virtual {v8}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 14013
+    .line 13946
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -1214,7 +1214,7 @@
 
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 14015
+    .line 13948
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->tmp:Landroid/webkit/SelectionUnitInfo;
@@ -1223,7 +1223,7 @@
 
     if-eqz v8, :cond_16
 
-    .line 14016
+    .line 13949
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->first:Landroid/webkit/SelectionUnitInfo;
@@ -1234,7 +1234,7 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/SelectionUnitInfo;->set(Landroid/webkit/SelectionUnitInfo;)V
 
-    .line 14021
+    .line 13954
     :cond_14
     :goto_e
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -1243,7 +1243,7 @@
 
     invoke-virtual {v8}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 14022
+    .line 13955
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -1274,7 +1274,7 @@
 
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 14024
+    .line 13957
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->tmp:Landroid/webkit/SelectionUnitInfo;
@@ -1283,7 +1283,7 @@
 
     if-eqz v8, :cond_17
 
-    .line 14025
+    .line 13958
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->second:Landroid/webkit/SelectionUnitInfo;
@@ -1294,7 +1294,7 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/SelectionUnitInfo;->set(Landroid/webkit/SelectionUnitInfo;)V
 
-    .line 14030
+    .line 13963
     :cond_15
     :goto_f
     iget-object v9, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
@@ -1311,26 +1311,26 @@
     iget-wide v10, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->mUpdateTime:J
 
     #calls: Landroid/webkit/WebView$QuickSelectWV;->doAutoExtend(Landroid/webkit/SelectionUnitInfo;J)Z
-    invoke-static {v9, v8, v10, v11}, Landroid/webkit/WebView$QuickSelectWV;->access$17300(Landroid/webkit/WebView$QuickSelectWV;Landroid/webkit/SelectionUnitInfo;J)Z
+    invoke-static {v9, v8, v10, v11}, Landroid/webkit/WebView$QuickSelectWV;->access$17400(Landroid/webkit/WebView$QuickSelectWV;Landroid/webkit/SelectionUnitInfo;J)Z
 
     move-result v8
 
     if-eqz v8, :cond_1b
 
-    .line 14031
+    .line 13964
     const/4 v2, -0x1
 
-    .line 14032
+    .line 13965
     .local v2, cur:I
     const/4 v7, -0x1
 
-    .line 14034
+    .line 13967
     .local v7, target:I
     iget-boolean v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->isPriorAnchor:Z
 
     if-nez v8, :cond_19
 
-    .line 14035
+    .line 13968
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->this$0:Landroid/webkit/WebView;
@@ -1361,14 +1361,14 @@
 
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 14037
+    .line 13970
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selEnd:Landroid/graphics/Rect;
 
     iget v2, v8, Landroid/graphics/Rect;->right:I
 
-    .line 14038
+    .line 13971
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->second:Landroid/webkit/SelectionUnitInfo;
@@ -1377,15 +1377,15 @@
 
     iget v7, v8, Landroid/graphics/Rect;->right:I
 
-    .line 14046
+    .line 13979
     :goto_11
     if-eq v2, v7, :cond_1a
 
-    .line 14047
+    .line 13980
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     #getter for: Landroid/webkit/WebView$QuickSelectWV;->mQSEventHandler:Landroid/webkit/WebView$QuickSelectWV$EventHub;
-    invoke-static {v8}, Landroid/webkit/WebView$QuickSelectWV;->access$17400(Landroid/webkit/WebView$QuickSelectWV;)Landroid/webkit/WebView$QuickSelectWV$EventHub;
+    invoke-static {v8}, Landroid/webkit/WebView$QuickSelectWV;->access$17500(Landroid/webkit/WebView$QuickSelectWV;)Landroid/webkit/WebView$QuickSelectWV$EventHub;
 
     move-result-object v8
 
@@ -1399,7 +1399,7 @@
 
     goto/16 :goto_d
 
-    .line 14017
+    .line 13950
     .end local v2           #cur:I
     .end local v7           #target:I
     :cond_16
@@ -1411,7 +1411,7 @@
 
     if-nez v8, :cond_14
 
-    .line 14018
+    .line 13951
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->first:Landroid/webkit/SelectionUnitInfo;
@@ -1420,7 +1420,7 @@
 
     goto/16 :goto_e
 
-    .line 14026
+    .line 13959
     :cond_17
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1430,7 +1430,7 @@
 
     if-nez v8, :cond_15
 
-    .line 14027
+    .line 13960
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->second:Landroid/webkit/SelectionUnitInfo;
@@ -1439,7 +1439,7 @@
 
     goto :goto_f
 
-    .line 14030
+    .line 13963
     :cond_18
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1447,7 +1447,7 @@
 
     goto :goto_10
 
-    .line 14040
+    .line 13973
     .restart local v2       #cur:I
     .restart local v7       #target:I
     :cond_19
@@ -1481,14 +1481,14 @@
 
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 14042
+    .line 13975
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
 
     iget v2, v8, Landroid/graphics/Rect;->left:I
 
-    .line 14043
+    .line 13976
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectWV;->first:Landroid/webkit/SelectionUnitInfo;
@@ -1499,7 +1499,7 @@
 
     goto :goto_11
 
-    .line 14050
+    .line 13983
     :cond_1a
     iget-object v8, p0, Landroid/webkit/WebView$QuickSelectWV$AnchorTouchListener;->this$1:Landroid/webkit/WebView$QuickSelectWV;
 
@@ -1513,7 +1513,7 @@
 
     goto/16 :goto_d
 
-    .line 14053
+    .line 13986
     .end local v2           #cur:I
     .end local v7           #target:I
     :cond_1b
@@ -1529,7 +1529,7 @@
 
     goto/16 :goto_d
 
-    .line 13839
+    .line 13772
     nop
 
     :array_0
@@ -1538,7 +1538,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 13846
+    .line 13779
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
