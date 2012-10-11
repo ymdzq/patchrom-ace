@@ -14,9 +14,6 @@ def AddAssertions(info):
     info.script.AppendExtra('set_perm_recursive(0, 2000, 06755, 06755, "/system/xbin");');
     info.script.AppendExtra('set_perm_recursive(0, 2000, 0755, 0750, "/system/etc/init.d");');
     info.script.AppendExtra('set_perm(0, 0, 0755, "/system/etc/init.d");');
-    info.script.AppendExtra('symlink("fw_bcm4329.bin", "/system/etc/firmware/fw_bcm4330_b2.bin");');
-    info.script.AppendExtra('symlink("fw_bcm4329_apsta.bin", "/system/etc/firmware/fw_bcm4330_apsta_b2.bin");');
-    info.script.AppendExtra('symlink("fw_bcm4329_p2p.bin", "/system/etc/firmware/fw_bcm4330_p2p_b2.bin");')
     return
 
 def FullOTA_InstallEnd(info):
