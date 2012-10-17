@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := HTCCamera SettingsProvider HTCAlbum MediaProvider HtcListen
+local-modified-apps := HTCCamera SettingsProvider HTCAlbum MediaProvider
 
 local-modified-jars := HTCExtension framework2
 
@@ -22,7 +22,7 @@ local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvide
 # All apps need to be reserved from original ZIP file
 local-phone-apps := ApplicationsProvider BackupRestoreConfirmation Bluetooth BrcmBluetoothServices \
 	CertInstaller DefaultContainerService DFPI DrmProvider FilePicker \
-	HtcBeatsNotify HTC_IME HTCCamera HtcFMRadio HtcListen com.htc.FMRadioWidget LiveWallpapers HTMLViewer KeyChain LMW  \
+	HtcBeatsNotify HTC_IME HTCCamera HtcFMRadio com.htc.FMRadioWidget LiveWallpapers HTMLViewer KeyChain LMW  \
 	NetworkLocation NoiseField PluginManager SDCardWizard SharedStorageBackup Stk \
 	TrimIt UploadProvider Usage UserDictionaryProvider WifiRouter \
 	CustomizationSettingsProvider SettingsProvider HTCAlbum MediaProvider \
