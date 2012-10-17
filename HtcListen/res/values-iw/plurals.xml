@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="Nsongs">
+        <item quantity="other">%d שירים</item>
+    </plurals>
+    <plurals name="Nalbums">
+        <item quantity="other">%d אלבומים</item>
+        <item quantity="one">אלבום 1</item>
+    </plurals>
+    <plurals name="NNNtracksdeleted">
+        <item quantity="other">%d שירים נמחקו</item>
+        <item quantity="one">שיר 1 נמחק</item>
+    </plurals>
+    <plurals name="NNNtrackstoplaylist">
+        <item quantity="other">%d נוספו לרשימת ההשמעה</item>
+        <item quantity="one">שיר 1 נוסף לרשימת ההשמעה</item>
+    </plurals>
+    <plurals name="NNNtrackstoqueue">
+        <item quantity="other">%d שירים נוספו לתור</item>
+        <item quantity="one">שיר אחד נוסף לתור</item>
+    </plurals>
+    <plurals name="htc_NNNdelteplaylists">
+        <item quantity="other">%d רשימות השמעה נמחקו</item>
+        <item quantity="one">רשימת השמעה 1 נמחקה</item>
+    </plurals>
+    <plurals name="htc_NNNremovefromplaylist">
+        <item quantity="other">%d שירים הוסרו</item>
+        <item quantity="one">שיר 1 הוסר</item>
+    </plurals>
+</resources>

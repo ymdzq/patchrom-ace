@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style">
+        <item>מגבר בס</item>
+        <item>Treble booster</item>
+        <item>Vocal booster</item>
+        <item>בלוז</item>
+        <item>קלאסי</item>
+        <item>קאונטרי</item>
+        <item>"ג'אז"</item>
+        <item>לטיני</item>
+        <item>העידן החדש</item>
+        <item>פסנתר</item>
+        <item>פופ</item>
+        <item>R&amp;amp;amp;B</item>
+        <item>רוק</item>
+    </string-array>
+    <string-array name="sound_effect_style">
+        <item>ללא אפקטים</item>
+        <item>דולבי נייד</item>
+        <item>שיפור SRS</item>
+        <item>אקולייזר (אוזניות בלבד)</item>
+        <item>Beats Audio</item>
+    </string-array>
+    <string-array name="beats_effect_style">
+        <item>נטרל Beats audio</item>
+        <item>משפר HTC</item>
+        <item>הפעל Beats audio</item>
+    </string-array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>שוחררו לאחרונה</item>
+        <item>100 האלבומים הנפוצים ביותר</item>
+        <item>100 השירים הנפוצים ביותר</item>
+        <item>ערוצים</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>אלטרנטיבי</item>
+        <item>דאנס &amp;amp;amp; האוס</item>
+        <item>אלקטרוני</item>
+        <item>"ג'אז"</item>
+        <item>פופ</item>
+        <item>R&amp;amp;amp;B</item>
+        <item>ראפ</item>
+        <item>רוק</item>
+    </string-array>
+</resources>
