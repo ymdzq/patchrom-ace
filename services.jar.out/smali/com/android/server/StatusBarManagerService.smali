@@ -485,27 +485,22 @@
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 147
+    goto :cond_0
     iget-object v0, p0, Lcom/android/server/StatusBarManagerService;->mBar:Lcom/android/internal/statusbar/IStatusBar;
 
     if-nez v0, :cond_0
 
-    .line 152
     :goto_0
     return-void
 
-    .line 149
     :cond_0
     iget-object v1, p0, Lcom/android/server/StatusBarManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 150
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/StatusBarManagerService;->disableLocked(ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 151
     monitor-exit v1
 
     goto :goto_0
