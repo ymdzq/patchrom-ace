@@ -19,8 +19,8 @@
    Please obey the local laws and do not use it for any commercial purpose.
 
 2. I used three different versions to port, so there are three branches
-   Base branch "ics" -- base on the MIUI offical patchrom of HTC Desire S(https://github.com/MiCode/patchrom-saga)
-   "vivo" -- base on the MIUI offical patchrom of HTC Incredible S(https://github.com/MiCode/patchrom-vivo)
+   Base branch "ics" -- base on the MIUI offical patchrom of HTC Desire S (https://github.com/MiCode/patchrom-saga)
+   "vivo" -- base on the MIUI offical patchrom of HTC Incredible S (https://github.com/MiCode/patchrom-vivo)
    "Bliss" -- base on the MIUI offical patchrom of HTC Incredible S, and i mixed the Sabsa Bliss v2.0 and the stockrom what MIUI used to a new stockrom
 
 3. Regarding Issue reporting, feature request and general discussion, please visit Miui forum,
