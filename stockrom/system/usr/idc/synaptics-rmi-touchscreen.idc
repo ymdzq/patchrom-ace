@@ -51,13 +51,22 @@ touch.toolSize.isSummed = 1
 # will be above 1.0.  We don't expect these values to be accurate.
 touch.pressure.calibration = amplitude
 touch.pressure.source = default
-touch.pressure.scale = 0.01
+touch.pressure.scale = 0.001
 
 # Size
-touch.size.calibration = normalized
+#touch.size.calibration = normalized
+touch.size.calibration = area
 
 # Orientation
 touch.orientation.calibration = none
 
-# Type
+# Set Gesture Mode to disable pointer
+touch.gestureMode = spots 
+
+# Set DeviceType 
 touch.deviceType = touchScreen
+
+# Set orientation awareness
+# Thanks to SGS2 team
+touch.orientationAware = 1
+
