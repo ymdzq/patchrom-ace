@@ -13,7 +13,7 @@ local-modified-apps := HTCCamera SettingsProvider HTCAlbum MediaProvider
 
 local-modified-jars := HTCExtension framework2
 
-local-miui-modified-apps := Phone ThemeManager Mms MiuiHome Settings MiuiGallery MiuiSystemUI
+local-miui-modified-apps := Phone ThemeManager Mms MiuiHome Settings MiuiGallery Contacts MiuiSystemUI
 # All apks from MIUI
 local-miui-removed-apps  := LatinIME SettingsProvider Stk Bluetooth MediaProvider
 
