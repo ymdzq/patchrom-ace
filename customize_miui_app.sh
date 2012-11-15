@@ -49,3 +49,7 @@ fi
 if [ $1 = "MiuiGallery" ];then
     $XMLMERGYTOOL $1/res/values $2/res/values
 fi
+
+if [ $1 = "Contacts" ];then
+    $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
+fi
