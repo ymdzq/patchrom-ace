@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="shortcut_icon_size">60.0dip</dimen>
+    <dimen name="dialer_buttons_height">230dip</dimen>
+
+    <dimen name="contact_detail_action_bar_height">60dip</dimen>
+    <dimen name="unknown_contact_detail_action_bar_height">60dip</dimen>
+
+    <dimen name="editor_type_label_width">80dip</dimen>
+    <dimen name="editor_type_label_height">37dip</dimen>
+    <dimen name="empty_view_width">11dip</dimen>
+
+    <dimen name="selected_tab_rectangle_width">66dip</dimen>
+    <dimen name="quickcontact_track_button_width">65dip</dimen>
+    <dimen name="call_log_item_height">68dip</dimen>
+    <dimen name="call_log_contact_photo_width">53dip</dimen>
+
 </resources>
