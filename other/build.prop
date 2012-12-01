@@ -97,8 +97,6 @@ ro.ril.hsxpa = 2
 ro.telephony.default_network=0
 
 wifi.interface=wlan0
-wifi.softap.interface=wlan0
-wifi.softapconcurrent.interface=wl0.1
 wifi.supplicant_scan_interval=15
 
 # The OpenGL ES API level that is natively supported by this device.
