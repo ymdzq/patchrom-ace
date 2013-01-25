@@ -13363,6 +13363,12 @@
     :goto_4
     move-object/from16 v0, p0
 
+    invoke-direct {v0, v9}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->resetPlmn(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    move-object/from16 v0, p0
+
     iget-object v0, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     move-object/from16 v16, v0
@@ -14331,4 +14337,68 @@
 
     :cond_0
     return-object v0
+.end method
+
+.method private resetPlmn(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+    .parameter "oldPlmn"
+
+    .prologue
+    .line 500
+    iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->ss:Landroid/telephony/ServiceState;
+
+    invoke-virtual {v2}, Landroid/telephony/ServiceState;->getOperatorNumeric()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 501
+    .local v0, carrier:Ljava/lang/String;
+    invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "MOBILE_OPERATOR_NAME_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 504
+    .local v1, newPlmn:Ljava/lang/String;
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 507
+    .end local v1           #newPlmn:Ljava/lang/String;
+    :goto_0
+    return-object v1
+
+    .restart local v1       #newPlmn:Ljava/lang/String;
+    :cond_0
+    move-object v1, p1
+
+    goto :goto_0
 .end method
